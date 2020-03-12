@@ -1,0 +1,132 @@
+---
+title: Clasificación ABC
+author: Saúl Méndez
+date: '2020-03-11'
+slug: clasificacion-abc-pareto
+categories:
+  - Análisis descriptivo
+tags:
+  - ABC
+  - Pareto
+subtitle: ''
+summary: 'En esta entrada exploraremos el concepto de una clasificación ABC, para que nos puede servir, que requisitos básicos debemos cumplir y como podemos implementar este tipo de análisis en excel.'
+authors: []
+lastmod: '2020-03-11T20:56:27-06:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: ["Análisis descriptivo"]
+---
+
+
+
+<div id="qué-es-la-clasificación-abc-y-para-que-nos-sirve" class="section level1">
+<h1>¿Qué es la Clasificación ABC y para que nos sirve?</h1>
+<p>Este tipo de análisis nace del principio de Pareto, el cual se puede resumir en la frase <em>el 80% del resultado proviene del 20% de los esfuerzos </em>. La clasificación ABC es un análisis descriptivo que nos permitirá conocer cuales son los items más importantes a los que se les debe de poner atención.</p>
+<p>Por ejemplo, si estamos en un proyecto de derrame de bebidas en una empresa de distribución y queremos priorizar las rutas a las que les debemos de poner mayor atención podemos correr este tipo de análisis para identificar las rutas con clasificación A.</p>
+<p>Usualmente la clasificación ABC sigue el siguiente formato</p>
+<ul>
+<li>A: 20% de los items, 80% del resultado</li>
+<li>B: 30% de los items, 15% del resultado</li>
+<li>C: 50% de los items, 5% del resultado</li>
+</ul>
+<p>Una vez identificados cuales son los items que generan la mayor parte del resultado, podemos enfocarnos en proponer estrategias para mitigar o potenciar el resultado. Siguiendo con el ejemplo de las rutas que generan la mayor cantidad de derrame, esta clasificación nos puede orientar en la forma de atacar y priorizar implementaciones de tácticas en las rutas</p>
+<p>Este tipo de análisis debemos de realizarlo cuando tengamos varios items que queremos analizar. En el caso de que estos sean menos de 10 items este análisis no tiene tanto valor ya que es muy fácil distinguir cuales son los items de alto impacto. Ahora, si la cantidad de items a analizar es considerablemente grande, es recomendable el uso de este tipo de análisis para entender e identificar cuales son los productos con mayor impacto.</p>
+</div>
+<div id="qué-necesitamos" class="section level1">
+<h1>¿Qué necesitamos?</h1>
+<p>En primer lugar, necesitamos una tabla que contenga el valor de resultado al nivel de granularidad de los esfuerzos que queremos analizar. Usualmente nos referiremos a este análisis como ABC de <strong>Categoria a analizar</strong> por <strong>Medida de Análisis</strong></p>
+<ul>
+<li>La columna de categoría a analizar deberá de ser un código que identifique a la categoría que queremos analizar o la misma categoría</li>
+<li>La medida de análisis debe de ser un valor numérico.</li>
+</ul>
+<div id="ejemplo" class="section level2">
+<h2>Ejemplo</h2>
+<ul>
+<li>ABC de Clientes por Ventas: Para realizar esto necesitamos una tabla con una fila por cada cliente que queremos analizar
+<ul>
+<li>Columna de identificación del cliente</li>
+<li>Columna con los valores de venta totales para el periodo analizado</li>
+</ul></li>
+</ul>
+<div class="figure">
+<img src="/post/clasificacion-abc/index_files/venta_cliente.png" alt="Venta cliente" />
+<p class="caption">Venta cliente</p>
+</div>
+<p>El motivo por el que realizamos una tabla con información resumida a nivel de cliente y no a nivel transaccional es por que necesitamos conocer cual es el desempeño global de los clientes. Si se hiciese a nivel transaccional, el análisis perdería sentido si queremos clasificar clientes, porque estos se repetirían varias veces y perderíamos de vista el impacto consolidado. En el caso de hacerlo a nivel transaccional lo que se debería de estar analizando en un ABC seria eso, las transacciones y no los clientes</p>
+</div>
+</div>
+<div id="teoría---just-the-basics" class="section level1">
+<h1>Teoría - Just the basics</h1>
+<p>Para poder obtener la clasificación ABC necesitamos lo siguiente:</p>
+<ul>
+<li>La tabla con los valores ordenados de mayor a menor</li>
+<li>El valor acumulado de la columna con la medida de análisis</li>
+<li>El % de valor acumulado de la medida</li>
+<li>Una columna con la clasificación que cumpla las siguientes condiciones:
+<ul>
+<li>Clasificación A -&gt; [% acumulado]&lt;= 80%</li>
+<li>Clasificación B -&gt; 80% &lt; [% acumulado] &lt;= 95%</li>
+<li>Clasificación C -&gt; 95% &lt; [% acumulado]</li>
+</ul></li>
+</ul>
+</div>
+<div id="implementandolo-en-excel" class="section level1">
+<h1>Implementandolo en Excel</h1>
+<p>Para implementarlo en Excel debemos de seguir las mismas indicaciones que nos dice la teoría, a continuación revisaremos el paso a paso:</p>
+<ol style="list-style-type: decimal">
+<li>Como primer punto necesitamos la tabla con una columna con la variable que queremos clasificar y una columna numérica que servirá para realizar la clasificación. Una vez tengamos la tabla, debemos de ordenar de mayor a menor la columna númerica.</li>
+</ol>
+<div class="figure">
+<img src="/post/clasificacion-abc/index_files/Ordenar-mayor-a-menor.png" alt="Ordenar de mayor a menor" />
+<p class="caption">Ordenar de mayor a menor</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Luego debemos de generar una columna que guarde el valor acumulado para cada una de las categorias que queremos revisar. En este caso utilizamos la formula <code>IFERROR(E2+F1,E2)</code> si estamos en Excel en ingles o <code>SI.ERROR(E2+F1,E2)</code> en español. Esta formula lo que esta haciendo es tomar el valor que existe en la columna numerica y le suma el valor previo para generar el acumulado. En caso de generar error unicamente devuelve el valor númerico, este caso solo ocurre en la primera fila de la columna ya que estamos sumando texto con un número.</li>
+</ol>
+<div class="figure">
+<img src="/post/clasificacion-abc/index_files/Acumulado_apariciones.png" alt="Acumulado de appearances" />
+<p class="caption">Acumulado de appearances</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Como siguiente paso, debemos de crear una columna que nos devuelva el porcentaje acumulado de la variable que estamos analizando. En este caso tomamos el valor que aparece en la columna de <code>valor acumulado</code> y lo dividimos por el <code>valor total</code> de la columna.</li>
+</ol>
+<div class="figure">
+<img src="/post/clasificacion-abc/index_files/pct_acumulado.png" alt="Porcentaje acumulado" />
+<p class="caption">Porcentaje acumulado</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Como paso final antes de pasar al análisis, debemos de crear la columna que nos clasificara nuestros items. Para esto generamos una formula <code>IF</code> en donde clasificacmos como <strong>A al % acumulado menor al 80%</strong>, <strong>B al que es menor al 95%</strong> y <strong>C al restante</strong>. La formula a utilizar en Excel es <code>IF( [@[Porcentaje Acumulado]] &lt; 0.8, "A", IF( [@[Porcentaje Acumulado]]  &lt; 0.95 , "B", "C") )</code> y en español utilizamos la fórmula <code>SI</code></li>
+</ol>
+<div class="figure">
+<img src="/post/clasificacion-abc/index_files/clasificacion_abc.png" alt="Clasificación ABC" />
+<p class="caption">Clasificación ABC</p>
+</div>
+<p>Una vez terminada la clasificación de los items de interés, ahora procedemos a analizar los resultados. En este caso, los resultados obtenidos en este análisis siguen casi al pie de la letra el enunciado de pareto. En donde el 19.6% de los personajes analizados tienen el 80% de las apariciones. Luego en la segunda categoria tenemos que el 33.4% de los personajes tienen el 15% de las apariciones y el restante 47% el 5% de las apariciones restantes.</p>
+<div class="figure">
+<img src="/post/clasificacion-abc/index_files/clasificacion_abc.png" alt="Resultados ABC" />
+<p class="caption">Resultados ABC</p>
+</div>
+<p>En algunos casos estos datos no nos dan mucho insight sobre lo que esta pasando. En este caso especifico contamos con la clasificación de alineación de los personajes en la mayoria de los casos, por lo que lo incluimos al análisis. Ahora encontramos algunos detalles interesantes, como que los personajes buenos son los que mayor cantidad de apariciones se llevan en las categoria ABC de apariciones <strong>A y B</strong>. Cabe destacar tambien que más de la mitad de las apariciones que tenemos en este conjunto de datos son de personajes buenos.</p>
+<p>En este análisis, que no es una decisión de negocio la que esta en juego, no ganamos muchos insights, pero para una nueva empresa de comics puede servir como una guia de como debemos de presentar a los protagonistas a la hora de escribir las propias, o bien voltear los papeles para alterar los flujos de la historia usualmente presentada por la competencia.</p>
+<div class="figure">
+<img src="/post/clasificacion-abc/index_files/buenos_malos_abc.png" alt="Resultados ABC alineación" />
+<p class="caption">Resultados ABC alineación</p>
+</div>
+</div>
+<div id="aplicaciones-avanzadas" class="section level1">
+<h1>Aplicaciones avanzadas</h1>
+<ul>
+<li><p>Costo Consumo: Es un análisis en donde se clasifican skus por las variables de costo actual y el consumo de las mismas, esto nos devuelve una doble clasificación. Se concatenan y para cada una de las categorías implementamos distintas estrategias</p></li>
+<li><p>Filtro en modelo de datos: Si nos encontramos realizando un análisis dentro de PowerBI, podemos hacer uso de este marco analítico para reflejar los resultados dentro de un tablero.</p></li>
+</ul>
+</div>
+<div id="ejemplos" class="section level1">
+<h1>Ejemplos</h1>
+<ul>
+<li><a href="https://www.dropbox.com/sh/blgr132dtzzc9lw/AACjl-XDW84Y8oQ5JPB0TLdca?dl=0">ABC de Ventas</a></li>
+<li><a href="https://www.dropbox.com/s/edhcm5nvsn7lzrn/ABC%20Ventas.xlsx?dl=0">ABC de apariciones en DC Cómics</a></li>
+</ul>
+</div>

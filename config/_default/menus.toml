@@ -1,0 +1,43 @@
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links will appear in.
+
+
+[[main]]
+  name = "Análisis descriptivo"
+  url = "categories/analisis-descriptivo/"
+  weight = 30
+  
+[[main]]
+  name = "Análisis inferencial"
+  url = "categories/analisis-descriptivo/"
+  weight = 40  
+
+[[main]]
+  name = "Indicadores"
+  url = "categories/analisis-descriptivo/"
+  weight = 50  
+
+[[main]]
+  name = "Lecciones aprendidas"
+  url = "categories/analisis-descriptivo/"
+  weight = 60
+  
+[[main]]
+  name = "Nuevo Ingreso"
+  url = "categories/analisis-descriptivo/"
+  weight = 70  
+
+[[main]]
+  name = "Inspiración"
+  url = "categories/analisis-descriptivo/"
+  weight = 80  
+
+
+# Link to a PDF of your resume/CV from the menu.
+# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
+# [[main]]
+#    name = "CV"
+#    url = "files/cv.pdf"
+#    weight = 70
