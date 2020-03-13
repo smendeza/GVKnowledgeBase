@@ -3,21 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/courses/example/example1/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/courses/example/</loc>
-    <lastmod>2018-09-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/courses/example/example2/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/talk/example/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
@@ -29,42 +14,52 @@
   
   <url>
     <loc>/tags/abc/</loc>
-    <lastmod>2020-03-11T20:56:27-06:00</lastmod>
+    <lastmod>2020-03-12T23:28:44-06:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/analisis-descriptivo/</loc>
-    <lastmod>2020-03-11T20:56:27-06:00</lastmod>
+    <lastmod>2020-03-12T23:28:44-06:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-03-11T20:56:27-06:00</lastmod>
+    <lastmod>2020-03-12T23:28:44-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/costo-consumo/</loc>
+    <lastmod>2020-03-12T23:28:44-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/inventarios/</loc>
+    <lastmod>2020-03-12T23:28:44-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/matriz-costo-consumo/</loc>
+    <lastmod>2020-03-12T23:28:44-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/pareto/</loc>
+    <lastmod>2020-03-12T23:28:44-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-03-12T23:28:44-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-03-12T23:28:44-06:00</lastmod>
   </url>
   
   <url>
     <loc>/post/clasificacion-abc-pareto/</loc>
     <lastmod>2020-03-11T20:56:27-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/pareto/</loc>
-    <lastmod>2020-03-11T20:56:27-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2020-03-11T20:56:27-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-03-11T20:56:27-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/courses/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>

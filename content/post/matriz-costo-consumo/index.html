@@ -1,0 +1,110 @@
+---
+title: Matriz Costo Consumo
+author: Saúl
+date: '2020-03-12'
+slug: matriz-costo-consumo
+categories:
+  - Análisis descriptivo
+tags:
+  - ABC
+  - Pareto
+  - Costo Consumo
+  - Inventarios
+subtitle: ''
+summary: ''
+math: true
+authors: []
+lastmod: '2020-03-12T23:28:44-06:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+
+<div id="qué-es-una-matriz-costo-consumo-y-para-que-nos-sirve" class="section level1">
+<h1>¿Qué es una matriz costo consumo y para que nos sirve?</h1>
+<p>Es una aplicación del principio de pareto y análisis ABC, en donde seleccionamos dos medidas de interes desde la perspectiva de administración del inventario.</p>
+<p>Una vez aplicado este análisis, generamos y/o recomendamos distintas estrategias que se deben traducir en un beneficio para nuestro cliente. En este caso, el análisis se centra en analizar bajo el enfoque ABC el costo del inventario y la venta del mismo.</p>
+<div id="abc-de-venta" class="section level2">
+<h2>ABC de Venta</h2>
+<p>Para esta variable, lo recomendable es usar daa histórica de los últimos 12 meses (U12m), ya sea totalizada o en base al promedio mensual de venta(recomendable). Una vez realizado el <a href="http://127.0.0.1:3200/post/clasificacion-abc-pareto/">análisis ABC</a> procedemos a realizar el mismo para la siguiente variable.</p>
+</div>
+<div id="abc-de-inventario" class="section level2">
+<h2>ABC de Inventario</h2>
+<p>Para esta variable, lo recomendable es usar el valor del <strong>inventario actual</strong></p>
+</div>
+<div id="datos-adicionales-que-podemos-calcular" class="section level2">
+<h2>Datos adicionales que podemos calcular</h2>
+<p>Con la información a la mano, podemos calcular las siguientes medidas, que nos pueden servir para ampliar el análisis y tener mayor contexto para la toma de decisiones:</p>
+<ul>
+<li>Cobertura(meses): Inventario actual/Venta promedio U12M
+</li>
+<li>Coeficiente de variacion: Desviación estándar / Venta promedio - Es preferible que la venta promedio en este caso no contenga los costos</li>
+</ul>
+</div>
+<div id="clasificación-costo-consumo" class="section level2">
+<h2>Clasificación Costo Consumo</h2>
+<p>Una vez realizados los pasos de clasificación ABC para las dos variables de interés, procederemos a realizar la clasificación costo consumo, que involucra la concatenación del ABC de Costo y el ABC de Venta.</p>
+<p>Consideración: Si el producto es nuevo<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>, debemos de incluir una clasificación adicional llamada <strong>Nuevo</strong> al análisis de ABC y debemos de excluir y analizar por separado los productos bajo esta clasificación.</p>
+</div>
+</div>
+<div id="análisis" class="section level1">
+<h1>Análisis</h1>
+<p>Para cada una de estas clasificiones, estudiaremos lo siguiente:</p>
+<ul>
+<li>Número de items</li>
+<li>Valor del inventario</li>
+<li>Cobertura de producto media</li>
+</ul>
+<p><strong>PENDIENTES EN ESTA SECCIÓN: COMO REALIZAR EL ANÁLISIS EN EXCEL</strong>*</p>
+<p>Con esta información estamos listos para generar recomendaciones en cuanto a la administración del inventario, estas son algunas sugerencias:</p>
+<ul>
+<li>Llevar un control detallado de coberturas y realizar un análisis previo para garantizar su abastecimiento</li>
+<li>Candidatos a depuración</li>
+<li>Realizar pedidos automáticos a través del cálculo de puntos de reorden</li>
+</ul>
+<p>Usualmente un approach que garantiza parte del retorno de un proyecto se enfoca en la depuración de portafolio. La estrategia más usual bajo este esquema es el siguiente:</p>
+<ul>
+<li>Tomar un snapshot al inicio del proyecto del detalle de productos candidatos a depuración</li>
+<li>Generar estrategias de depuración con base a la cobertura de los mismos, además de los tipos de producto que se encuentran en el listado</li>
+<li>Evaluar el costo financiero de rotar el inventario actual bajo los días de cobertura que se tiene para cada producto</li>
+<li>Ejecutar las estrategias y monitorear los desalojos de inventario</li>
+</ul>
+<p>Este tipo de estrategia, bien ejecutada, nos permite generar retornos de forma inmediata y puede ser considerado un <strong>plan de choque</strong><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p>
+</div>
+<div id="evaluando-el-mef-de-depuración-de-portafolio" class="section level1">
+<h1>Evaluando el MEF de depuración de portafolio</h1>
+<ul>
+<li>Calcular la línea base del snapshot inicial, es decir el costo financiero de mantener todo ese producto bajo inventario</li>
+<li>Excluir nuevas compras de este prodcuto, debido a que la decisión de compra fue tomada previo a que iniciaramos el proyecto.
+<ul>
+<li>Utilizar como tasa de descuento el costo de los prestamos actuales de la empresa</li>
+</ul></li>
+<li>Calcular los montos de inventario al final de cada mes y volver a calcular el costo financiero</li>
+<li>Sacar la diferencia entre la linea base y el valor actual del inventario</li>
+</ul>
+</div>
+<div id="presentando-los-resultados-y-nuestras-recomendaciones" class="section level1">
+<h1>Presentando los resultados y nuestras recomendaciones</h1>
+<p>PENDIENTE EN ESTA SECCIÓN: COLOCAR PRESENTACIÓN EJEMPLO DE COSTO CONSMO, COLOCAR UN GRÁFICO DE DISPERSIÓN EN EXCEL Y EN R</p>
+</div>
+<div id="notas-adicionales" class="section level1">
+<h1>Notas adicionales</h1>
+<p>Para una toma de decisiones más informada para la administración del inventario, podemos considerar ampliar al análisis tomando en cuenta los <a href="Análisis%20ABC-xyz">coeficientes de variación</a>. Adicionalmente, podemos seguir ampliando el análisis tomando en cuenta información de contexto comercial.</p>
+<p>Un approach utilizado previamente en otros proyectos de retail ha sido:</p>
+<ul>
+<li>ABC Costo + ABC Venta|XYZ + Boston|Rentabilidad Rotación - productos nuevos.</li>
+</ul>
+<p>Esto nos otorga distintas clasificaciones con sentido de negocio que nos permiten tomar decisiones más inteligentes y que hacen sentido para toda la cadena de valor.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Una introducción al portafolio menor a 12 meses es un buen parámetro para estimar la venta de productos nuevos<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>Un plan de choque es algo que podemos implementar desde el inicio del proyecto y que nos compra tiempo ante la inminente desesperación de un cliente por ver resultados (no somos baratos)<a href="#fnref2" class="footnote-back">↩</a></p></li>
+</ol>
+</div>

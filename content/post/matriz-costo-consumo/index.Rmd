@@ -1,0 +1,96 @@
+---
+title: Matriz Costo Consumo
+author: Saúl
+date: '2020-03-12'
+slug: matriz-costo-consumo
+categories:
+  - Análisis descriptivo
+tags:
+  - ABC
+  - Pareto
+  - Costo Consumo
+  - Inventarios
+subtitle: ''
+summary: ''
+math: true
+authors: []
+lastmod: '2020-03-12T23:28:44-06:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+# ¿Qué es una matriz costo consumo y para que nos sirve?
+
+Es una aplicación del principio de pareto y análisis ABC, en donde seleccionamos dos medidas de interes desde la perspectiva de administración del inventario.
+
+Una vez aplicado este análisis, generamos y/o recomendamos distintas estrategias que se deben traducir en un beneficio para nuestro cliente. En este caso, el análisis se centra en analizar bajo el enfoque ABC el costo del inventario y la venta del mismo.
+
+## ABC de Venta
+Para esta variable, lo recomendable es usar daa histórica de los últimos 12 meses (U12m), ya sea totalizada o en base al promedio mensual de venta(recomendable). Una vez realizado el [análisis ABC](http://127.0.0.1:3200/post/clasificacion-abc-pareto/) procedemos a realizar el mismo para la siguiente variable.
+
+## ABC de Inventario
+Para esta variable, lo recomendable es usar el valor del **inventario actual**
+
+## Datos adicionales que podemos calcular
+Con la información a la mano, podemos calcular las siguientes medidas, que nos pueden servir para ampliar el análisis y tener mayor contexto para la toma de decisiones:
+
+  * Cobertura(meses): Inventario actual/Venta promedio U12M
+  \frac{Inventario}{Venta\ P\ U12m}
+  * Coeficiente de variacion: Desviación estándar / Venta promedio - Es preferible que la venta promedio en este caso no contenga los costos
+
+## Clasificación Costo Consumo
+Una vez realizados los pasos de clasificación ABC para las dos variables de interés, procederemos a realizar la clasificación costo consumo, que involucra la concatenación del ABC de Costo y el ABC de Venta.
+
+Consideración: Si el producto es nuevo^[Una introducción al portafolio menor a 12 meses es un buen parámetro para estimar la venta de productos nuevos], debemos de incluir una clasificación adicional llamada **Nuevo** al análisis de ABC y debemos de excluir y analizar por separado los productos bajo esta clasificación.
+
+# Análisis
+Para cada una de estas clasificiones, estudiaremos lo siguiente:
+  
+  * Número de items
+  * Valor del inventario
+  * Cobertura de producto media
+  
+**PENDIENTES EN ESTA SECCIÓN: COMO REALIZAR EL ANÁLISIS EN EXCEL***
+  
+Con esta información estamos listos para generar recomendaciones en cuanto a la administración del inventario, estas son algunas sugerencias:
+
+  * Llevar un control detallado de coberturas y realizar un análisis previo para garantizar su abastecimiento
+  * Candidatos a depuración
+  * Realizar pedidos automáticos a través del cálculo de puntos de reorden
+  
+Usualmente un approach que garantiza parte del retorno de un proyecto se enfoca en la depuración de portafolio. La estrategia más usual bajo este esquema es el siguiente:
+
+  * Tomar un snapshot al inicio del proyecto del detalle de productos candidatos a depuración
+  * Generar estrategias de depuración con base a la cobertura de los mismos, además de los tipos de producto que se encuentran en el listado
+  * Evaluar el costo financiero de rotar el inventario actual bajo los días de cobertura que se tiene para cada producto
+  * Ejecutar las estrategias y monitorear los desalojos de inventario
+
+Este tipo de estrategia, bien ejecutada, nos permite generar retornos de forma inmediata y puede ser considerado un **plan de choque**^[Un plan de choque es algo que podemos implementar desde el inicio del proyecto y que nos compra tiempo ante la inminente desesperación de un cliente por ver resultados (no somos baratos)]. 
+  
+# Evaluando el MEF de depuración de portafolio
+
+  * Calcular la línea base del snapshot inicial, es decir el costo financiero de mantener todo ese producto bajo inventario
+  * Excluir nuevas compras de este prodcuto, debido a que la decisión de compra fue tomada previo a que iniciaramos el proyecto.
+    * Utilizar como tasa de descuento el costo de los prestamos actuales de la empresa
+  * Calcular los montos de inventario al final de cada mes y volver a calcular el costo financiero
+  * Sacar la diferencia entre la linea base y el valor actual del inventario
+
+
+# Presentando los resultados y nuestras recomendaciones
+
+PENDIENTE EN ESTA SECCIÓN: COLOCAR PRESENTACIÓN EJEMPLO DE COSTO CONSMO, COLOCAR UN GRÁFICO DE DISPERSIÓN EN EXCEL Y EN R 
+
+# Notas adicionales
+  
+Para una toma de decisiones más informada para la administración del inventario, podemos considerar ampliar al análisis tomando en cuenta los [coeficientes de variación](Análisis ABC-xyz). Adicionalmente, podemos seguir ampliando el análisis tomando en cuenta información de contexto comercial.
+
+Un approach utilizado previamente en otros proyectos de retail ha sido:
+
+  *  ABC Costo + ABC Venta|XYZ + Boston|Rentabilidad Rotación - productos nuevos.
+  
+Esto nos otorga distintas clasificaciones con sentido de negocio que nos permiten tomar decisiones más inteligentes y que hacen sentido para toda la cadena de valor.
+

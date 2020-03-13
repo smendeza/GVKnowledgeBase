@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Costo Consumo | GV Knowledge Base</title>
+    <link>/tags/costo-consumo/</link>
+      <atom:link href="/tags/costo-consumo/index.xml" rel="self" type="application/rss+xml" />
+    <description>Costo Consumo</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Thu, 12 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:square]</url>
+      <title>Costo Consumo</title>
+      <link>/tags/costo-consumo/</link>
+    </image>
+    
+    <item>
+      <title>Matriz Costo Consumo</title>
+      <link>/post/matriz-costo-consumo/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/matriz-costo-consumo/</guid>
+      <description>
+
+
+&lt;div id=&#34;qué-es-una-matriz-costo-consumo-y-para-que-nos-sirve&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;¿Qué es una matriz costo consumo y para que nos sirve?&lt;/h1&gt;
+&lt;p&gt;Es una aplicación del principio de pareto y análisis ABC, en donde seleccionamos dos medidas de interes desde la perspectiva de administración del inventario.&lt;/p&gt;
+&lt;p&gt;Una vez aplicado este análisis, generamos y/o recomendamos distintas estrategias que se deben traducir en un beneficio para nuestro cliente. En este caso, el análisis se centra en analizar bajo el enfoque ABC el costo del inventario y la venta del mismo.&lt;/p&gt;
+&lt;div id=&#34;abc-de-venta&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;ABC de Venta&lt;/h2&gt;
+&lt;p&gt;Para esta variable, lo recomendable es usar daa histórica de los últimos 12 meses (U12m), ya sea totalizada o en base al promedio mensual de venta(recomendable). Una vez realizado el &lt;a href=&#34;http://127.0.0.1:3200/post/clasificacion-abc-pareto/&#34;&gt;análisis ABC&lt;/a&gt; procedemos a realizar el mismo para la siguiente variable.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;abc-de-inventario&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;ABC de Inventario&lt;/h2&gt;
+&lt;p&gt;Para esta variable, lo recomendable es usar el valor del &lt;strong&gt;inventario actual&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;datos-adicionales-que-podemos-calcular&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Datos adicionales que podemos calcular&lt;/h2&gt;
+&lt;p&gt;Con la información a la mano, podemos calcular las siguientes medidas, que nos pueden servir para ampliar el análisis y tener mayor contexto para la toma de decisiones:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cobertura(meses): Inventario actual/Venta promedio U12M
+&lt;/li&gt;
+&lt;li&gt;Coeficiente de variacion: Desviación estándar / Venta promedio - Es preferible que la venta promedio en este caso no contenga los costos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clasificación-costo-consumo&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Clasificación Costo Consumo&lt;/h2&gt;
+&lt;p&gt;Una vez realizados los pasos de clasificación ABC para las dos variables de interés, procederemos a realizar la clasificación costo consumo, que involucra la concatenación del ABC de Costo y el ABC de Venta.&lt;/p&gt;
+&lt;p&gt;Consideración: Si el producto es nuevo&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;, debemos de incluir una clasificación adicional llamada &lt;strong&gt;Nuevo&lt;/strong&gt; al análisis de ABC y debemos de excluir y analizar por separado los productos bajo esta clasificación.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;análisis&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Análisis&lt;/h1&gt;
+&lt;p&gt;Para cada una de estas clasificiones, estudiaremos lo siguiente:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Número de items&lt;/li&gt;
+&lt;li&gt;Valor del inventario&lt;/li&gt;
+&lt;li&gt;Cobertura de producto media&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;PENDIENTES EN ESTA SECCIÓN: COMO REALIZAR EL ANÁLISIS EN EXCEL&lt;/strong&gt;*&lt;/p&gt;
+&lt;p&gt;Con esta información estamos listos para generar recomendaciones en cuanto a la administración del inventario, estas son algunas sugerencias:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Llevar un control detallado de coberturas y realizar un análisis previo para garantizar su abastecimiento&lt;/li&gt;
+&lt;li&gt;Candidatos a depuración&lt;/li&gt;
+&lt;li&gt;Realizar pedidos automáticos a través del cálculo de puntos de reorden&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Usualmente un approach que garantiza parte del retorno de un proyecto se enfoca en la depuración de portafolio. La estrategia más usual bajo este esquema es el siguiente:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tomar un snapshot al inicio del proyecto del detalle de productos candidatos a depuración&lt;/li&gt;
+&lt;li&gt;Generar estrategias de depuración con base a la cobertura de los mismos, además de los tipos de producto que se encuentran en el listado&lt;/li&gt;
+&lt;li&gt;Evaluar el costo financiero de rotar el inventario actual bajo los días de cobertura que se tiene para cada producto&lt;/li&gt;
+&lt;li&gt;Ejecutar las estrategias y monitorear los desalojos de inventario&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Este tipo de estrategia, bien ejecutada, nos permite generar retornos de forma inmediata y puede ser considerado un &lt;strong&gt;plan de choque&lt;/strong&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;evaluando-el-mef-de-depuración-de-portafolio&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Evaluando el MEF de depuración de portafolio&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Calcular la línea base del snapshot inicial, es decir el costo financiero de mantener todo ese producto bajo inventario&lt;/li&gt;
+&lt;li&gt;Excluir nuevas compras de este prodcuto, debido a que la decisión de compra fue tomada previo a que iniciaramos el proyecto.
+&lt;ul&gt;
+&lt;li&gt;Utilizar como tasa de descuento el costo de los prestamos actuales de la empresa&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Calcular los montos de inventario al final de cada mes y volver a calcular el costo financiero&lt;/li&gt;
+&lt;li&gt;Sacar la diferencia entre la linea base y el valor actual del inventario&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;presentando-los-resultados-y-nuestras-recomendaciones&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Presentando los resultados y nuestras recomendaciones&lt;/h1&gt;
+&lt;p&gt;PENDIENTE EN ESTA SECCIÓN: COLOCAR PRESENTACIÓN EJEMPLO DE COSTO CONSMO, COLOCAR UN GRÁFICO DE DISPERSIÓN EN EXCEL Y EN R&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;notas-adicionales&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Notas adicionales&lt;/h1&gt;
+&lt;p&gt;Para una toma de decisiones más informada para la administración del inventario, podemos considerar ampliar al análisis tomando en cuenta los &lt;a href=&#34;Análisis%20ABC-xyz&#34;&gt;coeficientes de variación&lt;/a&gt;. Adicionalmente, podemos seguir ampliando el análisis tomando en cuenta información de contexto comercial.&lt;/p&gt;
+&lt;p&gt;Un approach utilizado previamente en otros proyectos de retail ha sido:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ABC Costo + ABC Venta|XYZ + Boston|Rentabilidad Rotación - productos nuevos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Esto nos otorga distintas clasificaciones con sentido de negocio que nos permiten tomar decisiones más inteligentes y que hacen sentido para toda la cadena de valor.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Una introducción al portafolio menor a 12 meses es un buen parámetro para estimar la venta de productos nuevos&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;Un plan de choque es algo que podemos implementar desde el inicio del proyecto y que nos compra tiempo ante la inminente desesperación de un cliente por ver resultados (no somos baratos)&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
