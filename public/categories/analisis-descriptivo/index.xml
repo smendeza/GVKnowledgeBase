@@ -5,12 +5,194 @@
     <link>/categories/analisis-descriptivo/</link>
       <atom:link href="/categories/analisis-descriptivo/index.xml" rel="self" type="application/rss+xml" />
     <description>Análisis descriptivo</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Thu, 12 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Fri, 13 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:square]</url>
       <title>Análisis descriptivo</title>
       <link>/categories/analisis-descriptivo/</link>
     </image>
+    
+    <item>
+      <title>Clasificación ABC - XYZ</title>
+      <link>/post/clasificacion-abc-xyz/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/clasificacion-abc-xyz/</guid>
+      <description>
+
+
+&lt;p&gt;Es una herramienta utilizada usualmente para el establecimiento de políticas de administración de inventario a través del establecimiento de niveles de servicio basados en la volatilidad de la venta y la contribución al total de ventas de cada sku.&lt;/p&gt;
+&lt;p&gt;En la clasificacion XYZ se establece un estándar de nivel de servicio, &lt;a href=&#34;https://saulm.netlify.com/post/coeficiente-de-variacion/&#34;&gt;en la entrada&lt;/a&gt; en donde explicamos en que consiste este análisis, no nos aventuramos a verificar cual sería el efecto de tener un nivel de servicio del 100% en todos los skus. Hagamos el siguiente ejercicio mental: Supongamos que un cliente nos pregunta porque no tomar este enfoque y tu siendo un consultor que entiende el efecto le responde:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Si realizamos este tipo de estrategia para todo el inventario, estariamos elevando las cobertutras de inventario de productos que su contribución al volumen de venta no justifique el costo de oportunidad de mantener una unidad extra en inventario, implicando un costo de inversión mucho más grande de lo necesario.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Luego de un momento de silencio vienes y le propones lo siguiente:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Podemos afinar la estrategia de niveles de servicio incluyendo una clasificación adicional que nos ayude a identificar los skus por nivel de contribución a la venta total y generar estrategías personalizadas para cada uno de los distintos casos que nos podemos encontrar.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Para poder cumplir con la promesa anterior, vienes y le muestras la siguiente tabla, que resumen el nivel de servicio que estariamos recomendando mantener para cada producto&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;INSERTAR TABLA RESUMEN ABC-XYZ&lt;/strong&gt;&lt;/p&gt;
+&lt;div id=&#34;implementación&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Implementación&lt;/h1&gt;
+&lt;p&gt;Para poder implementar este análisis necesitamos&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ventas de los U12M&lt;/li&gt;
+&lt;li&gt;Valor de las existencias actuales&lt;/li&gt;
+&lt;li&gt;Identificar a los productos de nuevo ingreso, para excluirlos del análisis.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Los pasos que debemos de seguir para poder implementar este tipo de análisis son los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Calcular el ABC de la venta U12M&lt;/li&gt;
+&lt;li&gt;Calcular la clasificación XYZ&lt;/li&gt;
+&lt;li&gt;Concatenar la clasificación ABC con la XYZ&lt;/li&gt;
+&lt;li&gt;Determinar el nivel de servicio y número de desviaciones estándar&lt;/li&gt;
+&lt;li&gt;Determinar niveles de inventario ideales&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;presentando-el-resultado&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Presentando el resultado&lt;/h1&gt;
+&lt;p&gt;En este ejemplo, estamos analizando bajo el enfoque ABC-XYZ una base de datos que contiene la venta y el inventario de distintos skus de ron vendidos en algún lugar del mundo.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;right&#34;&gt;Codigo&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Familia&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Existencia&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Venta12m&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Promedio&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Stdev&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;CoV&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Cobertura&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;133&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;RON&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;10&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;85&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.083333&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.918401&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.2590684&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.411765&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;134&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;RON&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;647&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3154&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;262.833333&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;282.104698&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.0733216&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.461636&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;135&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;RON&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;514&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2630&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;219.166667&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;145.998651&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.6661535&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.345247&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;136&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;RON&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;397&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3847&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;320.583333&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;160.976824&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.5021372&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.238368&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;137&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;RON&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;167&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;346&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;28.833333&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;33.943357&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.1772263&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5.791907&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Una vez cargado el análisis, corremos la lógica del ABC y XYZ y creamos las clasificaciones correspondientes. Esto nos permitirá elaborar la siguiente gráfica:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-13-clasificación-abc-xyz_files/figure-html/imagen-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Para cada uno de los cuadrantes que estamos observanco en la gráfica, recomendamos distintos niveles de servicio. Si análizamos el resultado, podemos observar…&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Clasificación XYZ</title>
+      <link>/post/coeficiente-de-variacion/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/coeficiente-de-variacion/</guid>
+      <description>
+
+
+&lt;div id=&#34;porqué-utilizar-el-coeficiente-de-variación&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;¿Porqué utilizar el coeficiente de variación?&lt;/h1&gt;
+&lt;p&gt;Es una forma de medir de forma estandarizada la volatilidad de distintas distribuciones. Nos permite hacer comparaciones de distintas variables haciendo uso de su valor medio y la desviación estándar.&lt;/p&gt;
+&lt;div id=&#34;para-qué-nos-puede-servir&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;¿Para qué nos puede servir?&lt;/h2&gt;
+&lt;p&gt;Digamos que nuestra misión es determinar los niveles más adecuados de inventario y actualmente manejamos dos productos, el primer producto(p1) se registra en cajas y el segundo producto(p2) se maneja en sobres.&lt;/p&gt;
+&lt;p&gt;La forma más sencilla de atacar este problema es comprando el valor promedio. Esta estrategia funciona si tengo una demanda estable y poco variable. Este tipo de comportamiento, visto en un histograma se ve de la siguiente forma:
+&lt;strong&gt;INSERTAR GRÁFICO&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Recordemos que el valor al centro de la distribución es el promedio y que la mayoría de los valores observados se encuentran centrados muy cerca de este. El caso se complica cuando la distribución se comporta de forma más volátil, por lo que comprar el promedio puede significar un costo de oportunidad muy grande para nuestro ciente. Este tipo de situaciones se vería de la siguiente forma.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;INSERTAR GRÁFICO&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Para lograr una mejor del grado de volatilidad que se observa en la gráfica, utilizamos la desviación estándar. Esto con el objetivo de conocer cuantas unidades de separación al promedio puedo esperar. Con esto ya tenemos dos variables para describir el producto.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;INSERTAR TABLA&lt;/strong&gt;
+¿Cual es más volatil?: intuitivamente podriamos haber pensado que la opción 2 es la más volatil(correcto)&lt;/p&gt;
+&lt;p&gt;En este caso, es muy facil identificar a ojo cual es la variable más volatil. ¿Qué harian en el caso de manejar 10,000 skus? Si seguimos usando el metodo del ojimetro, debemos prepararnos a una intensidad titánica de trabajo para identificar cuales son los más volatiles. Digamos que lo logramos y ahora queremos ordenarlos por nivel de volatilidad…en este caso ya no podemos hacer uso del trabajo manual y hasta aca llegariamos con nuestros esfuerzos.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;introduciendo-al-coeficiente-de-variabilidad&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduciendo al Coeficiente de Variabilidad&lt;/h2&gt;
+&lt;p&gt;La opción más sencilla y super facil de implementar es el calcular el Coeficiente de Variabilidad.
+Su definición es:&lt;code&gt;Desviación Estandar / Promedio&lt;/code&gt;.
+El realizar esto nos permite quitarle las dimensiones a las medidas descriptivas (promedio, desviación estándar)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;INSERTAR ESCALA COMPARATIVA DEL VALOR DE COEFICIENTE PARA P1 Y P2&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;estrategia-simple-de-administración-de-la-volatilidad&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Estrategia simple de administración de la volatilidad&lt;/h1&gt;
+&lt;p&gt;La estrategia mas sencilla que podemos realizar para clasificar la volatilidad, es generar rangos para tres tipos de distribución que podemos encontrar:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;X -&amp;gt; CoV&amp;lt;=0.3&lt;/li&gt;
+&lt;li&gt;y -&amp;gt; 0.3&amp;lt;CoV&amp;lt;=0.6&lt;/li&gt;
+&lt;li&gt;z -&amp;gt; CoV&amp;gt;0.6&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Luego, para cada una de estas clasificaciones definimos un nivel de servicio, el cual nos debe de ayudar a generar cual es el monto de inventario ideal.&lt;/p&gt;
+&lt;div id=&#34;nivel-de-servicio&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Nivel de servicio&lt;/h2&gt;
+&lt;p&gt;Es la probabilidad con la que quiero asegurarme de cubrir la demanda durante un periodo de tiempo.
+En estadística existe un concepto de la curva normal estándar, en donde el valor medio se encuentra centrado en 0 con una desviación estándar de +-1. Tambien tiene la caracteriztica que si sumamos el área de izquierda a derecha de la curva, esta suma exactamente 50% del área.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;COLOCAR IMAGEN DE CURVA DE PROBABILIDAD AL 50%&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Si a la media le sumamos una desviación estándar, el valor del área es del 84% aproximadamente. A este porcentaje del área es lo que conocemos como nivel de servicio.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;COLOCAR IMAGEN DE CURVA DE PROBABILIDAD AL 84%&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Bajo el enfoque que nos interesa, nosotros decidimos el nivel de servicio que queremos obtener, es decir con que nivel de confianza adicional le voy a agregar al promedio. Recordemos al determinar el nivel de servicio, estamos definiendo la cantidad de desviaciones estándar que le agregaremos al promedio.&lt;/p&gt;
+&lt;p&gt;Para el caso que estamos tratando, lo usual es usar los siguientes niveles de servicio.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;x -&amp;gt; 98%(2.05)&lt;/li&gt;
+&lt;li&gt;y -&amp;gt; 85%(1.03)&lt;/li&gt;
+&lt;li&gt;z -&amp;gt; 65%(0.38) o 50%(0)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;implementando-la-clasificación-xyz&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Implementando la clasificación XYZ&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Necesitamos la información mensual de venta de los U12M
+Para cada SKU&lt;/li&gt;
+&lt;li&gt;Calcular el promedio mensual de venta para cada SKU&lt;/li&gt;
+&lt;li&gt;Calcular la desviación estándar para cada SKU&lt;/li&gt;
+&lt;li&gt;Calcular el coeficiente de variación&lt;/li&gt;
+&lt;li&gt;Realizar la clasificación XYZ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Matriz Costo Consumo</title>
@@ -26,7 +208,7 @@
 &lt;p&gt;Una vez aplicado este análisis, generamos y/o recomendamos distintas estrategias que se deben traducir en un beneficio para nuestro cliente. En este caso, el análisis se centra en analizar bajo el enfoque ABC el costo del inventario y la venta del mismo.&lt;/p&gt;
 &lt;div id=&#34;abc-de-venta&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;ABC de Venta&lt;/h2&gt;
-&lt;p&gt;Para esta variable, lo recomendable es usar daa histórica de los últimos 12 meses (U12m), ya sea totalizada o en base al promedio mensual de venta(recomendable). Una vez realizado el &lt;a href=&#34;http://127.0.0.1:3200/post/clasificacion-abc-pareto/&#34;&gt;análisis ABC&lt;/a&gt; procedemos a realizar el mismo para la siguiente variable.&lt;/p&gt;
+&lt;p&gt;Para esta variable, lo recomendable es usar daa histórica de los últimos 12 meses (U12m), ya sea totalizada o en base al promedio mensual de venta(recomendable). Una vez realizado el &lt;a href=&#34;https://saulm.netlify.com/post/clasificacion-abc-pareto/&#34;&gt;análisis ABC&lt;/a&gt; procedemos a realizar el mismo para la siguiente variable.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;abc-de-inventario&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;ABC de Inventario&lt;/h2&gt;
@@ -36,7 +218,7 @@
 &lt;h2&gt;Datos adicionales que podemos calcular&lt;/h2&gt;
 &lt;p&gt;Con la información a la mano, podemos calcular las siguientes medidas, que nos pueden servir para ampliar el análisis y tener mayor contexto para la toma de decisiones:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Cobertura(meses): Inventario actual/Venta promedio U12M
+&lt;li&gt;Cobertura(meses):  Inventario actual/Venta promedio U12M
 &lt;/li&gt;
 &lt;li&gt;Coeficiente de variacion: Desviación estándar / Venta promedio - Es preferible que la venta promedio en este caso no contenga los costos&lt;/li&gt;
 &lt;/ul&gt;

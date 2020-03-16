@@ -26,7 +26,7 @@
 &lt;p&gt;Una vez aplicado este análisis, generamos y/o recomendamos distintas estrategias que se deben traducir en un beneficio para nuestro cliente. En este caso, el análisis se centra en analizar bajo el enfoque ABC el costo del inventario y la venta del mismo.&lt;/p&gt;
 &lt;div id=&#34;abc-de-venta&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;ABC de Venta&lt;/h2&gt;
-&lt;p&gt;Para esta variable, lo recomendable es usar daa histórica de los últimos 12 meses (U12m), ya sea totalizada o en base al promedio mensual de venta(recomendable). Una vez realizado el &lt;a href=&#34;http://127.0.0.1:3200/post/clasificacion-abc-pareto/&#34;&gt;análisis ABC&lt;/a&gt; procedemos a realizar el mismo para la siguiente variable.&lt;/p&gt;
+&lt;p&gt;Para esta variable, lo recomendable es usar daa histórica de los últimos 12 meses (U12m), ya sea totalizada o en base al promedio mensual de venta(recomendable). Una vez realizado el &lt;a href=&#34;https://saulm.netlify.com/post/clasificacion-abc-pareto/&#34;&gt;análisis ABC&lt;/a&gt; procedemos a realizar el mismo para la siguiente variable.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;abc-de-inventario&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;ABC de Inventario&lt;/h2&gt;
@@ -36,7 +36,7 @@
 &lt;h2&gt;Datos adicionales que podemos calcular&lt;/h2&gt;
 &lt;p&gt;Con la información a la mano, podemos calcular las siguientes medidas, que nos pueden servir para ampliar el análisis y tener mayor contexto para la toma de decisiones:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Cobertura(meses): Inventario actual/Venta promedio U12M
+&lt;li&gt;Cobertura(meses):  Inventario actual/Venta promedio U12M
 &lt;/li&gt;
 &lt;li&gt;Coeficiente de variacion: Desviación estándar / Venta promedio - Es preferible que la venta promedio en este caso no contenga los costos&lt;/li&gt;
 &lt;/ul&gt;

@@ -5,12 +5,124 @@
     <link>/tags/inventarios/</link>
       <atom:link href="/tags/inventarios/index.xml" rel="self" type="application/rss+xml" />
     <description>Inventarios</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Thu, 12 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Fri, 13 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:square]</url>
       <title>Inventarios</title>
       <link>/tags/inventarios/</link>
     </image>
+    
+    <item>
+      <title>Clasificación ABC - XYZ</title>
+      <link>/post/clasificacion-abc-xyz/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/clasificacion-abc-xyz/</guid>
+      <description>
+
+
+&lt;p&gt;Es una herramienta utilizada usualmente para el establecimiento de políticas de administración de inventario a través del establecimiento de niveles de servicio basados en la volatilidad de la venta y la contribución al total de ventas de cada sku.&lt;/p&gt;
+&lt;p&gt;En la clasificacion XYZ se establece un estándar de nivel de servicio, &lt;a href=&#34;https://saulm.netlify.com/post/coeficiente-de-variacion/&#34;&gt;en la entrada&lt;/a&gt; en donde explicamos en que consiste este análisis, no nos aventuramos a verificar cual sería el efecto de tener un nivel de servicio del 100% en todos los skus. Hagamos el siguiente ejercicio mental: Supongamos que un cliente nos pregunta porque no tomar este enfoque y tu siendo un consultor que entiende el efecto le responde:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Si realizamos este tipo de estrategia para todo el inventario, estariamos elevando las cobertutras de inventario de productos que su contribución al volumen de venta no justifique el costo de oportunidad de mantener una unidad extra en inventario, implicando un costo de inversión mucho más grande de lo necesario.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Luego de un momento de silencio vienes y le propones lo siguiente:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Podemos afinar la estrategia de niveles de servicio incluyendo una clasificación adicional que nos ayude a identificar los skus por nivel de contribución a la venta total y generar estrategías personalizadas para cada uno de los distintos casos que nos podemos encontrar.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Para poder cumplir con la promesa anterior, vienes y le muestras la siguiente tabla, que resumen el nivel de servicio que estariamos recomendando mantener para cada producto&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;INSERTAR TABLA RESUMEN ABC-XYZ&lt;/strong&gt;&lt;/p&gt;
+&lt;div id=&#34;implementación&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Implementación&lt;/h1&gt;
+&lt;p&gt;Para poder implementar este análisis necesitamos&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ventas de los U12M&lt;/li&gt;
+&lt;li&gt;Valor de las existencias actuales&lt;/li&gt;
+&lt;li&gt;Identificar a los productos de nuevo ingreso, para excluirlos del análisis.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Los pasos que debemos de seguir para poder implementar este tipo de análisis son los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Calcular el ABC de la venta U12M&lt;/li&gt;
+&lt;li&gt;Calcular la clasificación XYZ&lt;/li&gt;
+&lt;li&gt;Concatenar la clasificación ABC con la XYZ&lt;/li&gt;
+&lt;li&gt;Determinar el nivel de servicio y número de desviaciones estándar&lt;/li&gt;
+&lt;li&gt;Determinar niveles de inventario ideales&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;presentando-el-resultado&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Presentando el resultado&lt;/h1&gt;
+&lt;p&gt;En este ejemplo, estamos analizando bajo el enfoque ABC-XYZ una base de datos que contiene la venta y el inventario de distintos skus de ron vendidos en algún lugar del mundo.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;right&#34;&gt;Codigo&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Familia&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Existencia&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Venta12m&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Promedio&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Stdev&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;CoV&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Cobertura&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;133&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;RON&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;10&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;85&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;7.083333&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8.918401&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.2590684&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.411765&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;134&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;RON&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;647&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3154&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;262.833333&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;282.104698&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.0733216&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.461636&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;135&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;RON&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;514&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2630&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;219.166667&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;145.998651&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.6661535&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2.345247&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;136&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;RON&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;397&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3847&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;320.583333&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;160.976824&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.5021372&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.238368&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;137&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;RON&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;167&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;346&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;28.833333&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;33.943357&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1.1772263&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5.791907&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Una vez cargado el análisis, corremos la lógica del ABC y XYZ y creamos las clasificaciones correspondientes. Esto nos permitirá elaborar la siguiente gráfica:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-13-clasificación-abc-xyz_files/figure-html/imagen-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Para cada uno de los cuadrantes que estamos observanco en la gráfica, recomendamos distintos niveles de servicio. Si análizamos el resultado, podemos observar…&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Matriz Costo Consumo</title>
@@ -26,7 +138,7 @@
 &lt;p&gt;Una vez aplicado este análisis, generamos y/o recomendamos distintas estrategias que se deben traducir en un beneficio para nuestro cliente. En este caso, el análisis se centra en analizar bajo el enfoque ABC el costo del inventario y la venta del mismo.&lt;/p&gt;
 &lt;div id=&#34;abc-de-venta&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;ABC de Venta&lt;/h2&gt;
-&lt;p&gt;Para esta variable, lo recomendable es usar daa histórica de los últimos 12 meses (U12m), ya sea totalizada o en base al promedio mensual de venta(recomendable). Una vez realizado el &lt;a href=&#34;http://127.0.0.1:3200/post/clasificacion-abc-pareto/&#34;&gt;análisis ABC&lt;/a&gt; procedemos a realizar el mismo para la siguiente variable.&lt;/p&gt;
+&lt;p&gt;Para esta variable, lo recomendable es usar daa histórica de los últimos 12 meses (U12m), ya sea totalizada o en base al promedio mensual de venta(recomendable). Una vez realizado el &lt;a href=&#34;https://saulm.netlify.com/post/clasificacion-abc-pareto/&#34;&gt;análisis ABC&lt;/a&gt; procedemos a realizar el mismo para la siguiente variable.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;abc-de-inventario&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;ABC de Inventario&lt;/h2&gt;
@@ -36,7 +148,7 @@
 &lt;h2&gt;Datos adicionales que podemos calcular&lt;/h2&gt;
 &lt;p&gt;Con la información a la mano, podemos calcular las siguientes medidas, que nos pueden servir para ampliar el análisis y tener mayor contexto para la toma de decisiones:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Cobertura(meses): Inventario actual/Venta promedio U12M
+&lt;li&gt;Cobertura(meses):  Inventario actual/Venta promedio U12M
 &lt;/li&gt;
 &lt;li&gt;Coeficiente de variacion: Desviación estándar / Venta promedio - Es preferible que la venta promedio en este caso no contenga los costos&lt;/li&gt;
 &lt;/ul&gt;
