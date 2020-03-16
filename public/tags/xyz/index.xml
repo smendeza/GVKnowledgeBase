@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XYZ | GV Knowledge Base</title>
+    <link>/tags/xyz/</link>
+      <atom:link href="/tags/xyz/index.xml" rel="self" type="application/rss+xml" />
+    <description>XYZ</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>©2020</copyright><lastBuildDate>Fri, 13 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:square]</url>
+      <title>XYZ</title>
+      <link>/tags/xyz/</link>
+    </image>
+    
+    <item>
+      <title>Clasificación ABC - XYZ</title>
+      <link>/post/clasificacion-abc-xyz/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/clasificacion-abc-xyz/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

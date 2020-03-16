@@ -30,7 +30,7 @@ Es una aplicación del principio de pareto y análisis ABC, en donde seleccionam
 Una vez aplicado este análisis, generamos y/o recomendamos distintas estrategias que se deben traducir en un beneficio para nuestro cliente. En este caso, el análisis se centra en analizar bajo el enfoque ABC el costo del inventario y la venta del mismo.
 
 ## ABC de Venta
-Para esta variable, lo recomendable es usar daa histórica de los últimos 12 meses (U12m), ya sea totalizada o en base al promedio mensual de venta(recomendable). Una vez realizado el [análisis ABC](http://127.0.0.1:3200/post/clasificacion-abc-pareto/) procedemos a realizar el mismo para la siguiente variable.
+Para esta variable, lo recomendable es usar daa histórica de los últimos 12 meses (U12m), ya sea totalizada o en base al promedio mensual de venta(recomendable). Una vez realizado el [análisis ABC](https://saulm.netlify.com/post/clasificacion-abc-pareto/) procedemos a realizar el mismo para la siguiente variable.
 
 ## ABC de Inventario
 Para esta variable, lo recomendable es usar el valor del **inventario actual**
@@ -38,7 +38,7 @@ Para esta variable, lo recomendable es usar el valor del **inventario actual**
 ## Datos adicionales que podemos calcular
 Con la información a la mano, podemos calcular las siguientes medidas, que nos pueden servir para ampliar el análisis y tener mayor contexto para la toma de decisiones:
 
-  * Cobertura(meses): Inventario actual/Venta promedio U12M
+  * Cobertura(meses): \frac{Inventario\ actual}{\Promedio\ de\ venta\ U12M} Inventario actual/Venta promedio U12M
   \frac{Inventario}{Venta\ P\ U12m}
   * Coeficiente de variacion: Desviación estándar / Venta promedio - Es preferible que la venta promedio en este caso no contenga los costos
 
