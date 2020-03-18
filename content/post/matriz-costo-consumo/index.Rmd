@@ -79,11 +79,17 @@ Este tipo de estrategia, bien ejecutada, nos permite generar retornos de forma i
   * Calcular los montos de inventario al final de cada mes y volver a calcular el costo financiero
   * Sacar la diferencia entre la linea base y el valor actual del inventario
 
+La forma en la que usualmente se presentan los resultados se puede observar en la siguiente imagen. En la misma podemos observar de forma resumida el resultado de un proyecto real durante los meses de febrero y marzo. Para cada mes se ejecutaron estrategias de desalojo de producto que generaron beneficios por 6k de lempiras y con una proyección lineal de 3.6M de lempiras al cabo de un año. 
+
+Hay que destacar que tambien se establece un objetivo mensual y global para esta iniciativa, es algo recomendable de realizar para ir midiendo la efectividad de nuestros esfuerzos y realizar acciones puntuales en caso de necesitar realizar correciones.
+
+![Resumen MEF Depuración](/post//matriz-costo-consumo/index_files/MEF Depuración.png)
 
 # Presentando los resultados y nuestras recomendaciones
 
 Una forma ejecutiva de presentar los resultados de forma resumida, es haciendo uso de una tabla resumen. En este caso estamos presentando el resultado de correr un análisis ABC Costo Consumo en una BD de botellas de ron
-![Costo Consumo](/post/matriz-costo-consumo/index_files/COSTO CONSUMO.png)
+
+![Resumen Costo Consumo](/post/matriz-costo-consumo/index_files/COSTO CONSUMO.png)
 
 De la imagen resumen podemos extraer algunos resultados valiosos. Los items AA tienen una cobertura promedio sana(menor a dos meses). Estos productos representan el 74% del inventario y se encuentran concentrados en el 22% de los items. Hay que destacar que la imagen de peso sobre el total nos ayuda bastante a complementar el análisis. Tambien debemos destacar que no tenemos items en las clasificaciones AC y BC, lo que se presenta como una oportunidad para encontrar productos en el portafolio que puedan llenar estas categorias ya que aportan un volumen interesante de venta a un costo reducido. 
 
