@@ -226,11 +226,11 @@ Para cada SKU&lt;/li&gt;
 
 &lt;div id=&#34;qué-es-una-matriz-costo-consumo-y-para-que-nos-sirve&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;¿Qué es una matriz costo consumo y para que nos sirve?&lt;/h1&gt;
-&lt;p&gt;Es una aplicación del principio de pareto y análisis ABC, en donde seleccionamos dos medidas de interes desde la perspectiva de administración del inventario.&lt;/p&gt;
+&lt;p&gt;Es una aplicación del principio de pareto y análisis ABC, en donde analizamos dos medidas de interés desde la perspectiva de administración del inventario.&lt;/p&gt;
 &lt;p&gt;Una vez aplicado este análisis, generamos y/o recomendamos distintas estrategias que se deben traducir en un beneficio para nuestro cliente. En este caso, el análisis se centra en analizar bajo el enfoque ABC el costo del inventario y la venta del mismo.&lt;/p&gt;
 &lt;div id=&#34;abc-de-venta&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;ABC de Venta&lt;/h2&gt;
-&lt;p&gt;Para esta variable, lo recomendable es usar daa histórica de los últimos 12 meses (U12m), ya sea totalizada o en base al promedio mensual de venta(recomendable). Una vez realizado el &lt;a href=&#34;https://saulm.netlify.com/post/clasificacion-abc-pareto/&#34;&gt;análisis ABC&lt;/a&gt; procedemos a realizar el mismo para la siguiente variable.&lt;/p&gt;
+&lt;p&gt;Para esta variable, lo recomendable es usar data histórica de los últimos 12 meses (U12m), ya sea totalizada o en base al promedio mensual de venta(recomendable). Una vez realizado el &lt;a href=&#34;https://saulm.netlify.com/post/clasificacion-abc-pareto/&#34;&gt;análisis ABC&lt;/a&gt; procedemos a realizar el mismo para la siguiente variable.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;abc-de-inventario&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;ABC de Inventario&lt;/h2&gt;
@@ -242,7 +242,7 @@ Para cada SKU&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;Cobertura(meses):  Inventario actual/Venta promedio U12M
 &lt;/li&gt;
-&lt;li&gt;Coeficiente de variacion: Desviación estándar / Venta promedio - Es preferible que la venta promedio en este caso no contenga los costos&lt;/li&gt;
+&lt;li&gt;Coeficiente de variación: Desviación estándar / Venta promedio - Es preferible que la venta promedio en este caso no contenga los costos&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;clasificación-costo-consumo&#34; class=&#34;section level2&#34;&gt;
@@ -253,7 +253,7 @@ Para cada SKU&lt;/li&gt;
 &lt;/div&gt;
 &lt;div id=&#34;análisis&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Análisis&lt;/h1&gt;
-&lt;p&gt;Para cada una de estas clasificiones, estudiaremos lo siguiente:&lt;/p&gt;
+&lt;p&gt;Para cada una de estas clasificaciones, estudiaremos lo siguiente:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Número de items&lt;/li&gt;
 &lt;li&gt;Valor del inventario&lt;/li&gt;
@@ -271,7 +271,7 @@ Para cada SKU&lt;/li&gt;
 &lt;li&gt;Tomar un snapshot al inicio del proyecto del detalle de productos candidatos a depuración&lt;/li&gt;
 &lt;li&gt;Generar estrategias de depuración con base a la cobertura de los mismos, además de los tipos de producto que se encuentran en el listado&lt;/li&gt;
 &lt;li&gt;Evaluar el costo financiero de rotar el inventario actual bajo los días de cobertura que se tiene para cada producto&lt;/li&gt;
-&lt;li&gt;Ejecutar las estrategias y monitorear los desalojos de inventario&lt;/li&gt;
+&lt;li&gt;Ejecutar las estrategias y monitoria los desalojos de inventario&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Este tipo de estrategia, bien ejecutada, nos permite generar retornos de forma inmediata y puede ser considerado un &lt;strong&gt;plan de choque&lt;/strong&gt;&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
@@ -279,7 +279,7 @@ Para cada SKU&lt;/li&gt;
 &lt;h1&gt;Evaluando el MEF de depuración de portafolio&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Calcular la línea base del snapshot inicial, es decir el costo financiero de mantener todo ese producto bajo inventario&lt;/li&gt;
-&lt;li&gt;Excluir nuevas compras de este prodcuto, debido a que la decisión de compra fue tomada previo a que iniciaramos el proyecto.
+&lt;li&gt;Excluir nuevas compras de este producto, debido a que la decisión de compra fue tomada previo a que iniciáramos el proyecto.
 &lt;ul&gt;
 &lt;li&gt;Utilizar como tasa de descuento el costo de los prestamos actuales de la empresa&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -289,6 +289,8 @@ Para cada SKU&lt;/li&gt;
 &lt;/div&gt;
 &lt;div id=&#34;presentando-los-resultados-y-nuestras-recomendaciones&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Presentando los resultados y nuestras recomendaciones&lt;/h1&gt;
+&lt;p&gt;Una forma ejecutiva de presentar los resultados de forma resumida, es haciendo uso de una tabla resumen. En este caso estamos presentando el resultado de correr un análisis ABC Costo Consumo en una BD de botellas de ron
+&lt;img src=&#34;/matriz-costo-consumo/index_files/COSTO%20CONSUMO.png&#34; alt=&#34;Costo Consumo&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;PENDIENTE EN ESTA SECCIÓN: COLOCAR PRESENTACIÓN EJEMPLO DE COSTO CONSMO, COLOCAR UN GRÁFICO DE DISPERSIÓN EN EXCEL Y EN R&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;notas-adicionales&#34; class=&#34;section level1&#34;&gt;
