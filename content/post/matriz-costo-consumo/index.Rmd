@@ -83,7 +83,7 @@ Este tipo de estrategia, bien ejecutada, nos permite generar retornos de forma i
 # Presentando los resultados y nuestras recomendaciones
 
 Una forma ejecutiva de presentar los resultados de forma resumida, es haciendo uso de una tabla resumen. En este caso estamos presentando el resultado de correr un análisis ABC Costo Consumo en una BD de botellas de ron
-![Costo Consumo](/matriz-costo-consumo/index_files/COSTO CONSUMO.png)
+![Costo Consumo](/post/matriz-costo-consumo/index_files/COSTO CONSUMO.png)
 
 PENDIENTE EN ESTA SECCIÓN: COLOCAR PRESENTACIÓN EJEMPLO DE COSTO CONSMO, COLOCAR UN GRÁFICO DE DISPERSIÓN EN EXCEL Y EN R 
 
