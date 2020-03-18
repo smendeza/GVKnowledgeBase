@@ -33,27 +33,34 @@ Usualmente la clasificación ABC sigue el siguiente formato
   * A: 20% de los items, 80% del resultado
   * B: 30% de los items, 15% del resultado
   * C: 50% de los items, 5% del resultado
-  
-Una vez identificados cuales son los items que generan la mayor parte del resultado, podemos enfocarnos en proponer estrategias para mitigar o potenciar el resultado. Siguiendo con el ejemplo de las rutas que generan la mayor cantidad de derrame, esta clasificación nos puede orientar en la forma de atacar y priorizar implementaciones de tácticas en las rutas
+
+El ejemplo anterior es el estándar utilizado en la mayoría de los análisis, pero tambien es permitido utilizar otros enfoques dependiendo de como sea la distribución de los items y el resultado. Un ejemplo podría ser:
+
+  * A: 10% de los items, 70% del resultado
+  * B: 25% de los items, 20% del resultado
+  * C: 65% de los items, 10% del resultado
+
+
+Una vez identificados cuales son los items que generan la mayor parte del resultado, podemos enfocarnos en proponer estrategias para mitigar o potenciar el resultado. Siguiendo con el ejemplo de las rutas que generan la mayor cantidad de derrame, esta clasificación nos puede orientar en la forma de atacar y priorizar implementaciones de tácticas en estas.
 
 Este tipo de análisis debemos de realizarlo cuando tengamos varios items que queremos analizar. En el caso de que estos sean menos de 10 items este análisis no tiene tanto valor ya que es muy fácil distinguir cuales son los items de alto impacto. Ahora, si la cantidad de items a analizar es considerablemente grande, es recomendable el uso de este tipo de análisis para entender e identificar cuales son los productos con mayor impacto.
 
 # ¿Qué necesitamos?
 
-En primer lugar, necesitamos una tabla que contenga el valor de resultado al nivel de granularidad de los esfuerzos que queremos analizar. Usualmente nos referiremos a este análisis como ABC de **Categoria a analizar** por **Medida de Análisis**
+En primer lugar, necesitamos una tabla que contenga el valor de resultado al nivel de granularidad de los esfuerzos que queremos analizar. Usualmente nos referiremos a este análisis como ABC de **Variable^[Esta usualmente es categórica] a analizar** por **Medida de Análisis**
 
-  * La columna de categoría a analizar deberá de ser un código que identifique a la categoría que queremos analizar o la misma categoría
-  * La medida de análisis debe de ser un valor numérico.
+  * La columna de variable categórica a analizar deberá de ser un código que identifique a la categoría que queremos analizar o la misma categoría
+  * La medida de análisis debe de ser un valor numérico que pueda ser sumado.
 
 ## Ejemplo
   
-  * ABC de Clientes por Ventas: Para realizar esto necesitamos una tabla con una fila por cada cliente que queremos analizar
+  * ABC de **Clientes** por **Ventas**: Para realizar esto necesitamos una tabla con una fila por cada cliente que queremos analizar
     * Columna de identificación del cliente 
     * Columna con los valores de venta totales para el periodo analizado
   
 ![Venta cliente](/post/clasificacion-abc/index_files/venta_cliente.png)    
     
- El motivo por el que realizamos una tabla con información resumida a nivel de cliente y no a nivel transaccional es por que necesitamos conocer cual es el desempeño global de los clientes. Si se hiciese a nivel transaccional, el análisis perdería sentido si queremos clasificar clientes, porque estos se repetirían varias veces y perderíamos de vista el impacto consolidado. En el caso de hacerlo a nivel transaccional lo que se debería de estar analizando en un ABC seria eso, las transacciones y no los clientes
+ El motivo por el que realizamos una tabla con información resumida a nivel de cliente y no a nivel transaccional es por que necesitamos conocer cual es el desempeño global de los clientes. Si se hiciese a nivel transaccional, el análisis perdería sentido si queremos clasificar clientes, porque estos se repetirían varias veces y perderíamos de vista el impacto consolidado. En el caso de hacerlo a nivel transaccional lo que se debería de estar analizando en un ABC seria eso, las **transacciones** y no los **clientes**
    
 # Teoría - Just the basics
 
@@ -86,9 +93,6 @@ Para implementarlo en Excel debemos de seguir las mismas indicaciones que nos di
   
 4. Como paso final antes de pasar al análisis, debemos de crear la columna que nos clasificara nuestros items. Para esto generamos una formula `IF` en donde clasificacmos como **A al % acumulado menor al 80%**, **B al que es menor al 95%** y **C al restante**. La formula a utilizar en Excel es `IF( [@[Porcentaje Acumulado]] < 0.8, "A", IF( [@[Porcentaje Acumulado]]  < 0.95 , "B", "C") )` y en español utilizamos la fórmula `SI`
 
-
-![Clasificación ABC](/post/clasificacion-abc/index_files/clasificacion_abc.png)
-
 Una vez terminada la clasificación de los items de interés, ahora procedemos a analizar los resultados. En este caso, los resultados obtenidos en este análisis siguen casi al pie de la letra el enunciado de pareto. En donde el 19.6% de los personajes analizados tienen el 80% de las apariciones. Luego en la segunda categoria tenemos que el 33.4% de los personajes tienen el 15% de las apariciones y el restante 47% el 5% de las apariciones restantes.
 
 ![Resultados ABC](/post/clasificacion-abc/index_files/clasificacion_abc.png)
@@ -101,7 +105,7 @@ En este análisis, que no es una decisión de negocio la que esta en juego, no g
 ![Resultados ABC alineación](/post/clasificacion-abc/index_files/buenos_malos_abc.png)
 
 
-# Aplicaciones avanzadas
+# Algunas aplicaciones avanzadas de este tipo de análisis
 
   * Costo Consumo: Es un análisis en donde se clasifican skus por las variables de costo actual y el consumo de las mismas, esto nos devuelve una doble clasificación. Se concatenan y para cada una de las categorías implementamos distintas estrategias
 

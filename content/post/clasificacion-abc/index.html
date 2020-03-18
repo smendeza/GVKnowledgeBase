@@ -32,20 +32,26 @@ projects: ["Análisis descriptivo"]
 <li>B: 30% de los items, 15% del resultado</li>
 <li>C: 50% de los items, 5% del resultado</li>
 </ul>
-<p>Una vez identificados cuales son los items que generan la mayor parte del resultado, podemos enfocarnos en proponer estrategias para mitigar o potenciar el resultado. Siguiendo con el ejemplo de las rutas que generan la mayor cantidad de derrame, esta clasificación nos puede orientar en la forma de atacar y priorizar implementaciones de tácticas en las rutas</p>
+<p>El ejemplo anterior es el estándar utilizado en la mayoría de los análisis, pero tambien es permitido utilizar otros enfoques dependiendo de como sea la distribución de los items y el resultado. Un ejemplo podría ser:</p>
+<ul>
+<li>A: 10% de los items, 70% del resultado</li>
+<li>B: 25% de los items, 20% del resultado</li>
+<li>C: 65% de los items, 10% del resultado</li>
+</ul>
+<p>Una vez identificados cuales son los items que generan la mayor parte del resultado, podemos enfocarnos en proponer estrategias para mitigar o potenciar el resultado. Siguiendo con el ejemplo de las rutas que generan la mayor cantidad de derrame, esta clasificación nos puede orientar en la forma de atacar y priorizar implementaciones de tácticas en estas.</p>
 <p>Este tipo de análisis debemos de realizarlo cuando tengamos varios items que queremos analizar. En el caso de que estos sean menos de 10 items este análisis no tiene tanto valor ya que es muy fácil distinguir cuales son los items de alto impacto. Ahora, si la cantidad de items a analizar es considerablemente grande, es recomendable el uso de este tipo de análisis para entender e identificar cuales son los productos con mayor impacto.</p>
 </div>
 <div id="qué-necesitamos" class="section level1">
 <h1>¿Qué necesitamos?</h1>
-<p>En primer lugar, necesitamos una tabla que contenga el valor de resultado al nivel de granularidad de los esfuerzos que queremos analizar. Usualmente nos referiremos a este análisis como ABC de <strong>Categoria a analizar</strong> por <strong>Medida de Análisis</strong></p>
+<p>En primer lugar, necesitamos una tabla que contenga el valor de resultado al nivel de granularidad de los esfuerzos que queremos analizar. Usualmente nos referiremos a este análisis como ABC de <strong>Variable<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> a analizar</strong> por <strong>Medida de Análisis</strong></p>
 <ul>
-<li>La columna de categoría a analizar deberá de ser un código que identifique a la categoría que queremos analizar o la misma categoría</li>
-<li>La medida de análisis debe de ser un valor numérico.</li>
+<li>La columna de variable categórica a analizar deberá de ser un código que identifique a la categoría que queremos analizar o la misma categoría</li>
+<li>La medida de análisis debe de ser un valor numérico que pueda ser sumado.</li>
 </ul>
 <div id="ejemplo" class="section level2">
 <h2>Ejemplo</h2>
 <ul>
-<li>ABC de Clientes por Ventas: Para realizar esto necesitamos una tabla con una fila por cada cliente que queremos analizar
+<li>ABC de <strong>Clientes</strong> por <strong>Ventas</strong>: Para realizar esto necesitamos una tabla con una fila por cada cliente que queremos analizar
 <ul>
 <li>Columna de identificación del cliente</li>
 <li>Columna con los valores de venta totales para el periodo analizado</li>
@@ -55,7 +61,7 @@ projects: ["Análisis descriptivo"]
 <img src="/post/clasificacion-abc/index_files/venta_cliente.png" alt="Venta cliente" />
 <p class="caption">Venta cliente</p>
 </div>
-<p>El motivo por el que realizamos una tabla con información resumida a nivel de cliente y no a nivel transaccional es por que necesitamos conocer cual es el desempeño global de los clientes. Si se hiciese a nivel transaccional, el análisis perdería sentido si queremos clasificar clientes, porque estos se repetirían varias veces y perderíamos de vista el impacto consolidado. En el caso de hacerlo a nivel transaccional lo que se debería de estar analizando en un ABC seria eso, las transacciones y no los clientes</p>
+<p>El motivo por el que realizamos una tabla con información resumida a nivel de cliente y no a nivel transaccional es por que necesitamos conocer cual es el desempeño global de los clientes. Si se hiciese a nivel transaccional, el análisis perdería sentido si queremos clasificar clientes, porque estos se repetirían varias veces y perderíamos de vista el impacto consolidado. En el caso de hacerlo a nivel transaccional lo que se debería de estar analizando en un ABC seria eso, las <strong>transacciones</strong> y no los <strong>clientes</strong></p>
 </div>
 </div>
 <div id="teoría---just-the-basics" class="section level1">
@@ -100,10 +106,6 @@ projects: ["Análisis descriptivo"]
 <ol start="4" style="list-style-type: decimal">
 <li>Como paso final antes de pasar al análisis, debemos de crear la columna que nos clasificara nuestros items. Para esto generamos una formula <code>IF</code> en donde clasificacmos como <strong>A al % acumulado menor al 80%</strong>, <strong>B al que es menor al 95%</strong> y <strong>C al restante</strong>. La formula a utilizar en Excel es <code>IF( [@[Porcentaje Acumulado]] &lt; 0.8, "A", IF( [@[Porcentaje Acumulado]]  &lt; 0.95 , "B", "C") )</code> y en español utilizamos la fórmula <code>SI</code></li>
 </ol>
-<div class="figure">
-<img src="/post/clasificacion-abc/index_files/clasificacion_abc.png" alt="Clasificación ABC" />
-<p class="caption">Clasificación ABC</p>
-</div>
 <p>Una vez terminada la clasificación de los items de interés, ahora procedemos a analizar los resultados. En este caso, los resultados obtenidos en este análisis siguen casi al pie de la letra el enunciado de pareto. En donde el 19.6% de los personajes analizados tienen el 80% de las apariciones. Luego en la segunda categoria tenemos que el 33.4% de los personajes tienen el 15% de las apariciones y el restante 47% el 5% de las apariciones restantes.</p>
 <div class="figure">
 <img src="/post/clasificacion-abc/index_files/clasificacion_abc.png" alt="Resultados ABC" />
@@ -116,8 +118,8 @@ projects: ["Análisis descriptivo"]
 <p class="caption">Resultados ABC alineación</p>
 </div>
 </div>
-<div id="aplicaciones-avanzadas" class="section level1">
-<h1>Aplicaciones avanzadas</h1>
+<div id="algunas-aplicaciones-avanzadas-de-este-tipo-de-análisis" class="section level1">
+<h1>Algunas aplicaciones avanzadas de este tipo de análisis</h1>
 <ul>
 <li><p>Costo Consumo: Es un análisis en donde se clasifican skus por las variables de costo actual y el consumo de las mismas, esto nos devuelve una doble clasificación. Se concatenan y para cada una de las categorías implementamos distintas estrategias</p></li>
 <li><p>Filtro en modelo de datos: Si nos encontramos realizando un análisis dentro de PowerBI, podemos hacer uso de este marco analítico para reflejar los resultados dentro de un tablero.</p></li>
@@ -129,4 +131,10 @@ projects: ["Análisis descriptivo"]
 <li><a href="https://www.dropbox.com/sh/blgr132dtzzc9lw/AACjl-XDW84Y8oQ5JPB0TLdca?dl=0">ABC de Ventas</a></li>
 <li><a href="https://www.dropbox.com/s/edhcm5nvsn7lzrn/ABC%20Ventas.xlsx?dl=0">ABC de apariciones en DC Cómics</a></li>
 </ul>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Esta usualmente es categórica<a href="#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
 </div>
