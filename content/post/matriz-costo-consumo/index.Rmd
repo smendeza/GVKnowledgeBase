@@ -99,7 +99,7 @@ PENDIENTE EN ESTA SECCIÓN: COLOCAR PRESENTACIÓN EJEMPLO DE COSTO CONSuMO, COLO
 
 # Notas adicionales
   
-Para una toma de decisiones más informada para la administración del inventario, podemos considerar ampliar al análisis tomando en cuenta los [coeficientes de variación](https://cocky-dijkstra-cf91ca.netlify.com/post/coeficiente-de-variacion/). Adicionalmente, podemos seguir ampliando el análisis tomando en cuenta información de contexto comercial.
+Para una toma de decisiones más informada para la administración del inventario, podemos considerar ampliar al análisis tomando en cuenta los [coeficientes de variación](https://saulm.netlify.com/post/coeficiente-de-variacion/). Adicionalmente, podemos seguir ampliando el análisis tomando en cuenta información de contexto comercial.
 
 Un approach utilizado previamente en otros proyectos de retail ha sido:
 
