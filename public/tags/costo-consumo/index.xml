@@ -87,7 +87,9 @@
 &lt;h1&gt;Presentando los resultados y nuestras recomendaciones&lt;/h1&gt;
 &lt;p&gt;Una forma ejecutiva de presentar los resultados de forma resumida, es haciendo uso de una tabla resumen. En este caso estamos presentando el resultado de correr un análisis ABC Costo Consumo en una BD de botellas de ron
 &lt;img src=&#34;/post/matriz-costo-consumo/index_files/COSTO%20CONSUMO.png&#34; alt=&#34;Costo Consumo&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;PENDIENTE EN ESTA SECCIÓN: COLOCAR PRESENTACIÓN EJEMPLO DE COSTO CONSMO, COLOCAR UN GRÁFICO DE DISPERSIÓN EN EXCEL Y EN R&lt;/p&gt;
+&lt;p&gt;De la imagen resumen podemos extraer algunos resultados valiosos. Los items AA tienen una cobertura promedio sana(menor a dos meses). Estos productos representan el 74% del inventario y se encuentran concentrados en el 22% de los items. Hay que destacar que la imagen de peso sobre el total nos ayuda bastante a complementar el análisis. Tambien debemos destacar que no tenemos items en las clasificaciones AC y BC, lo que se presenta como una oportunidad para encontrar productos en el portafolio que puedan llenar estas categorias ya que aportan un volumen interesante de venta a un costo reducido.&lt;/p&gt;
+&lt;p&gt;En el caso de la categoria de consumo B, podriamos ajustar un poco más cortas las coberturas, con el objetivo de no perder costos de oportunidad en las items de consumo A. Además, tenemos que resaltar que tenemos coberturas muy elevadas en la categoría de consumo C, por lo que debemos de realizar esfuerzos por disminuir las mismas y evitar mas compras de estos productos. Esto nos ayudará a &lt;strong&gt;eficientar&lt;/strong&gt; la administración del dinero invertido en inventario y hacerlo más productivo.&lt;/p&gt;
+&lt;p&gt;PENDIENTE EN ESTA SECCIÓN: COLOCAR PRESENTACIÓN EJEMPLO DE COSTO CONSuMO, COLOCAR UN GRÁFICO DE DISPERSIÓN EN EXCEL Y EN R&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;notas-adicionales&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Notas adicionales&lt;/h1&gt;

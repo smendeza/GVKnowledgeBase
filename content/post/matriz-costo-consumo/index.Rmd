@@ -85,7 +85,11 @@ Este tipo de estrategia, bien ejecutada, nos permite generar retornos de forma i
 Una forma ejecutiva de presentar los resultados de forma resumida, es haciendo uso de una tabla resumen. En este caso estamos presentando el resultado de correr un análisis ABC Costo Consumo en una BD de botellas de ron
 ![Costo Consumo](/post/matriz-costo-consumo/index_files/COSTO CONSUMO.png)
 
-PENDIENTE EN ESTA SECCIÓN: COLOCAR PRESENTACIÓN EJEMPLO DE COSTO CONSMO, COLOCAR UN GRÁFICO DE DISPERSIÓN EN EXCEL Y EN R 
+De la imagen resumen podemos extraer algunos resultados valiosos. Los items AA tienen una cobertura promedio sana(menor a dos meses). Estos productos representan el 74% del inventario y se encuentran concentrados en el 22% de los items. Hay que destacar que la imagen de peso sobre el total nos ayuda bastante a complementar el análisis. Tambien debemos destacar que no tenemos items en las clasificaciones AC y BC, lo que se presenta como una oportunidad para encontrar productos en el portafolio que puedan llenar estas categorias ya que aportan un volumen interesante de venta a un costo reducido. 
+
+En el caso de la categoria de consumo B, podriamos ajustar un poco más cortas las coberturas, con el objetivo de no perder costos de oportunidad en las items de consumo A. Además, tenemos que resaltar que tenemos coberturas muy elevadas en la categoría de consumo C, por lo que debemos de realizar esfuerzos por disminuir las mismas y evitar mas compras de estos productos. Esto nos ayudará a **eficientar** la administración del dinero invertido en inventario y hacerlo más productivo.
+
+PENDIENTE EN ESTA SECCIÓN: COLOCAR PRESENTACIÓN EJEMPLO DE COSTO CONSuMO, COLOCAR UN GRÁFICO DE DISPERSIÓN EN EXCEL Y EN R 
 
 # Notas adicionales
   
