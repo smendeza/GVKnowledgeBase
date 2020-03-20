@@ -21,6 +21,9 @@ image:
   focal_point: ''
   preview_only: no
 projects: []
+output:
+  blogdown::htmlpage:
+    toc: true
 ---
 
 # ¿Qué es una matriz costo consumo y para que nos sirve?

@@ -11,27 +11,27 @@
   
 [[main]]
   name = "Análisis inferencial"
-  url = "categories/analisis-descriptivo/"
+  url = "categories/analisis-inferencial/"
   weight = 40  
 
 [[main]]
   name = "Indicadores"
-  url = "categories/analisis-descriptivo/"
+  url = "categories/indicadores/"
   weight = 50  
 
 [[main]]
   name = "Lecciones aprendidas"
-  url = "categories/analisis-descriptivo/"
+  url = "categories/lecciones-aprendidas/"
   weight = 60
   
 [[main]]
   name = "Nuevo Ingreso"
-  url = "categories/analisis-descriptivo/"
+  url = "categories/nuevo-ingreso/"
   weight = 70  
 
 [[main]]
   name = "Inspiración"
-  url = "categories/analisis-descriptivo/"
+  url = "categories/inspiracion/"
   weight = 80  
 
 
