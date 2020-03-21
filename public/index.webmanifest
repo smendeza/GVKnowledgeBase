@@ -2,8 +2,8 @@
   "name": "GV Knowledge Base",
   "short_name": "GV Knowledge Base",
   "lang": "en-us",
-  "theme_color": "rgb(0, 136, 204)",
-  "background_color": "rgb(0, 136, 204)",
+  "theme_color": "#2962ff",
+  "background_color": "#2962ff",
   "icons": [{
     "src": "/images/icon_hu628c6d1358ca9fd145d92655d5449526_40681_192x192_fill_lanczos_center_2.png",
     "sizes": "192x192",
