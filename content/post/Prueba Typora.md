@@ -1,3 +1,11 @@
+---
+title: Clasificación ABC - XYZ
+author: Saúl Méndez
+date: '2020-03-13'
+slug: clasificacion-abc-xyz
+categories:
+  - Análisis descriptivo
+---
 # Prueba Typora
 
 Funciona o no funciona
