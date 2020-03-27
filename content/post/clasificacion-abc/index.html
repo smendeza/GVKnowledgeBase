@@ -23,31 +23,31 @@ projects: ["Análisis descriptivo"]
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
-<div id="qué-es-la-clasificación-abc-y-para-que-nos-sirve" class="section level1">
-<h1>¿Qué es la Clasificación ABC y para que nos sirve?</h1>
-<p>Este tipo de análisis nace del principio de Pareto, el cual se puede resumir en la frase <em>el 80% del resultado proviene del 20% de los esfuerzos </em>. La clasificación ABC es un análisis descriptivo que nos permitirá conocer cuales son los items más importantes a los que se les debe de poner atención.</p>
-<p>Por ejemplo, si estamos en un proyecto de derrame de bebidas en una empresa de distribución y queremos priorizar las rutas a las que les debemos de poner mayor atención podemos correr este tipo de análisis para identificar las rutas con clasificación A.</p>
+<div id="qué-es-la-clasificación-abc-y-para-qué-nos-sirve" class="section level1">
+<h1>¿Qué es la Clasificación ABC y para qué nos sirve?</h1>
+<p>Este tipo de análisis nace del principio de Pareto, el cual se puede resumir en la frase <em>el 80% del resultado proviene del 20% de los esfuerzos </em>. La clasificación ABC es un análisis descriptivo que nos permitirá conocer cuáles son los items más importantes a los que se les debe de poner atención.</p>
+<p>Por ejemplo, si estamos en un proyecto de derrame de bebidas en una empresa de distribución y queremos priorizar las rutas a las que les debemos de poner mayor atención, podemos correr este tipo de análisis para identificar las rutas con clasificación A.</p>
 <p>Usualmente la clasificación ABC sigue el siguiente formato</p>
 <ul>
 <li>A: 20% de los items, 80% del resultado</li>
 <li>B: 30% de los items, 15% del resultado</li>
 <li>C: 50% de los items, 5% del resultado</li>
 </ul>
-<p>El ejemplo anterior es el estándar utilizado en la mayoría de los análisis, pero también es permitido utilizar otros enfoques dependiendo de como sea la distribución de los items y el resultado. Un ejemplo podría ser:</p>
+<p>El ejemplo anterior es el estándar utilizado en la mayoría de los análisis, pero también es permitido utilizar otros enfoques dependiendo de cómo sea la distribución de los ítems y el resultado. Un ejemplo podría ser:</p>
 <ul>
 <li>A: 10% de los items, 70% del resultado</li>
 <li>B: 25% de los items, 20% del resultado</li>
 <li>C: 65% de los items, 10% del resultado</li>
 </ul>
-<p>Una vez identificados cuales son los items que generan la mayor parte del resultado, podemos enfocarnos en proponer estrategias para mitigar o potenciar el resultado. Siguiendo con el ejemplo de las rutas que generan la mayor cantidad de derrame, esta clasificación nos puede orientar en la forma de atacar y priorizar implementaciones de tácticas en estas.</p>
-<p>Este tipo de análisis debemos de realizarlo cuando tengamos varios items que queremos analizar. En el caso de que estos sean menos de 10 items este análisis no tiene tanto valor ya que es muy fácil distinguir cuales son los items de alto impacto. Ahora, si la cantidad de items a analizar es considerablemente grande, es recomendable el uso de este tipo de análisis para entender e identificar cuales son los productos con mayor impacto.</p>
+<p>Una vez identificados cuáles son los ítems que generan la mayor parte del resultado y siguiendo con el ejemplo de las rutas que generan la mayor cantidad de derrame, esta clasificación nos puede orientar en la forma de atacar y priorizar implementaciones de tácticas en estas.</p>
+<p>Esta herramienta debe utilizarse cuando se tengan varios ítems a analizar, ya que en el caso de que estos sean menor que 10, es muy fácil distinguir cuáles son los de alto impacto sin necesidad de este análisis.</p>
 </div>
 <div id="qué-necesitamos" class="section level1">
 <h1>¿Qué necesitamos?</h1>
-<p>En primer lugar, necesitamos una tabla que contenga el valor de resultado al nivel de granularidad de los esfuerzos que queremos analizar. Usualmente nos referiremos a este análisis como ABC de <strong>Variable<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> a analizar</strong> por <strong>Medida de Análisis</strong></p>
+<p>En primer lugar, necesitamos una tabla que contenga el valor de resultado al nivel de detalle de lo que queremos analizar. Usualmente nos referiremos a este análisis como ABC de <strong>Variable<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> a analizar</strong> por <strong>Medida de Análisis</strong></p>
 <ul>
-<li>La columna de variable categórica a analizar deberá de ser un código que identifique a la categoría que queremos analizar o la misma categoría</li>
-<li>La medida de análisis debe de ser un valor numérico que pueda ser sumado.</li>
+<li>La columna “variable categórica” deberá de ser un código que identifique a la categoría a analizar</li>
+<li>La medida de análisis debe de ser un valor numérico que pueda ser sumado</li>
 </ul>
 <div id="ejemplo" class="section level2">
 <h2>Ejemplo</h2>
@@ -62,7 +62,7 @@ projects: ["Análisis descriptivo"]
 <img src="/post/clasificacion-abc/index_files/venta_cliente.png" alt="" />
 <p class="caption">Venta cliente</p>
 </div>
-<p>El motivo por el que realizamos una tabla con información resumida a nivel de cliente y no a nivel transaccional es por que necesitamos conocer cual es el desempeño global de los clientes. Si se hiciese a nivel transaccional, el análisis perdería sentido si queremos clasificar clientes, porque estos se repetirían varias veces y perderíamos de vista el impacto consolidado. En el caso de hacerlo a nivel transaccional lo que se debería de estar analizando en un ABC seria eso, las <strong>transacciones</strong> y no los <strong>clientes</strong></p>
+<p>El motivo por el que realizamos una tabla con información resumida a nivel de cliente y no a nivel transaccional es por que necesitamos conocer cuál es el desempeño global de los clientes. Si se hiciese a nivel transaccional, el análisis perdería sentido si queremos clasificar clientes, porque estos se repetirían varias veces y perderíamos de vista el impacto consolidado. En el caso de hacerlo a nivel transaccional lo que se debería de estar analizando en un ABC sería eso, las <strong>transacciones</strong> y no los <strong>clientes</strong></p>
 </div>
 </div>
 <div id="teoría---just-the-basics" class="section level1">
@@ -80,8 +80,8 @@ projects: ["Análisis descriptivo"]
 </ul></li>
 </ul>
 </div>
-<div id="implementandolo-en-excel" class="section level1">
-<h1>Implementandolo en Excel</h1>
+<div id="implementándolo-en-excel" class="section level1">
+<h1>Implementándolo en Excel</h1>
 <p>Para implementarlo en Excel debemos de seguir las mismas indicaciones que nos dice la teoría, a continuación revisaremos el paso a paso:</p>
 <ol style="list-style-type: decimal">
 <li>Como primer punto necesitamos la tabla con una columna con la variable que queremos clasificar y una columna numérica que servirá para realizar la clasificación. Una vez tengamos la tabla, debemos de ordenar de mayor a menor la columna numérica.</li>
@@ -91,7 +91,7 @@ projects: ["Análisis descriptivo"]
 <p class="caption">Ordenar de mayor a menor</p>
 </div>
 <ol start="2" style="list-style-type: decimal">
-<li>Luego debemos de generar una columna que guarde el valor acumulado para cada una de las categorias que queremos revisar. En este caso utilizamos la formula <code>IFERROR(E2+F1,E2)</code> si estamos en Excel en ingles o <code>SI.ERROR(E2+F1,E2)</code> en español. Esta formula lo que esta haciendo es tomar el valor que existe en la columna numérica y le suma el valor previo para generar el acumulado. En caso de generar error únicamente devuelve el valor numérico, este caso solo ocurre en la primera fila de la columna ya que estamos sumando texto con un número.</li>
+<li>Luego debemos de generar una columna que guarde el valor acumulado para cada una de las categorías que queremos revisar. En este caso utilizamos la formula <code>IFERROR(E2+F1,E2)</code> si estamos en Excel en ingles o <code>SI.ERROR(E2+F1,E2)</code> en español. Esta formula lo que esta haciendo es tomar el valor que existe en la columna numérica y le suma el valor previo para generar el acumulado. En caso de generar error únicamente devuelve el valor numérico, este caso sólo ocurre en la primera fila de la columna ya que estamos sumando texto con un número.</li>
 </ol>
 <div class="figure">
 <img src="/post/clasificacion-abc/index_files/Acumulado_apariciones.png" alt="" />
@@ -105,15 +105,15 @@ projects: ["Análisis descriptivo"]
 <p class="caption">Porcentaje acumulado</p>
 </div>
 <ol start="4" style="list-style-type: decimal">
-<li>Como paso final antes de pasar al análisis, debemos de crear la columna que nos clasificara nuestros items. Para esto generamos una formula <code>IF</code> en donde clasificamos como <strong>A al % acumulado menor al 80%</strong>, <strong>B al que es menor al 95%</strong> y <strong>C al restante</strong>. La formula a utilizar en Excel es <code>IF( [@[Porcentaje Acumulado]] &lt; 0.8, "A", IF( [@[Porcentaje Acumulado]]  &lt; 0.95 , "B", "C") )</code> y en español utilizamos la fórmula <code>SI</code></li>
+<li>Como paso final antes de pasar al análisis, debemos de crear la columna que nos clasificará nuestros ítems. Para esto generamos una formula <code>IF</code> en donde clasificamos como <strong>A al % acumulado menor al 80%</strong>, <strong>B al que es menor al 95%</strong> y <strong>C al restante</strong>. La fórmula a utilizar en Excel es <code>IF( [@[Porcentaje Acumulado]] &lt; 0.8, "A", IF( [@[Porcentaje Acumulado]]  &lt; 0.95 , "B", "C") )</code> y en español utilizamos la fórmula <code>SI</code></li>
 </ol>
-<p>Una vez terminada la clasificación de los items de interés, ahora procedemos a analizar los resultados. En este caso, los resultados obtenidos en este análisis siguen casi al pie de la letra el enunciado de pareto. En donde el 19.6% de los personajes analizados tienen el 80% de las apariciones. Luego en la segunda categoría tenemos que el 33.4% de los personajes tienen el 15% de las apariciones y el restante 47% el 5% de las apariciones restantes.</p>
+<p>Una vez terminada la clasificación de los ítems de interés, ahora procedemos a analizar los resultados. En este caso, los resultados obtenidos siguen casi al pie de la letra el enunciado de pareto. En donde el 19.6% de los personajes analizados tienen el 80% de las apariciones. Luego en la segunda categoría tenemos que el 33.4% de los personajes tienen el 15% de las apariciones y el restante 47% el 5% de las apariciones restantes.</p>
 <div class="figure">
 <img src="/post/clasificacion-abc/index_files/clasificacion_abc.png" alt="" />
 <p class="caption">Resultados ABC</p>
 </div>
-<p>En algunos casos estos datos no nos dan mucho insight sobre lo que esta pasando. En este caso especifico contamos con la clasificación de alineación de los personajes en la mayoría de los casos, por lo que lo incluimos al análisis. Ahora encontramos algunos detalles interesantes, como que los personajes buenos son los que mayor cantidad de apariciones se llevan en las categoría ABC de apariciones <strong>A y B</strong>. Cabe destacar también que más de la mitad de las apariciones que tenemos en este conjunto de datos son de personajes buenos.</p>
-<p>En este análisis, que no es una decisión de negocio la que esta en juego, no ganamos muchos insights, pero para una nueva empresa de cómics puede servir como una guía de como debemos de presentar a los protagonistas a la hora de escribir las propias, o bien voltear los papeles para alterar los flujos de la historia usualmente presentada por la competencia.</p>
+<p>En algunos casos estos datos no nos dan mucho insight sobre lo que está pasando. En este caso específico contamos con la clasificación de alineación de los personajes en la mayoría de los casos, por lo que lo incluimos al análisis. Ahora encontramos algunos detalles interesantes, como que los personajes buenos son los que mayor cantidad de apariciones se llevan en las categoría ABC de apariciones <strong>A y B</strong>. Cabe destacar también que más de la mitad de las apariciones que tenemos en este conjunto de datos son de personajes buenos.</p>
+<p>En este análisis, que no es una decisión de negocio la que está en juego, no ganamos muchos insights, pero para una nueva empresa de cómics puede servir como una guía de cómo debemos presentar a los protagonistas a la hora de escribir las propias, o bien voltear los papeles para alterar los flujos de la historia usualmente presentada por la competencia.</p>
 <div class="figure">
 <img src="/post/clasificacion-abc/index_files/buenos_malos_abc.png" alt="" />
 <p class="caption">Resultados ABC alineación</p>
