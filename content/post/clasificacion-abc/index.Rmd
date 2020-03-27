@@ -34,7 +34,7 @@ Usualmente la clasificación ABC sigue el siguiente formato
   * B: 30% de los items, 15% del resultado
   * C: 50% de los items, 5% del resultado
 
-El ejemplo anterior es el estándar utilizado en la mayoría de los análisis, pero tambien es permitido utilizar otros enfoques dependiendo de como sea la distribución de los items y el resultado. Un ejemplo podría ser:
+El ejemplo anterior es el estándar utilizado en la mayoría de los análisis, pero también es permitido utilizar otros enfoques dependiendo de como sea la distribución de los items y el resultado. Un ejemplo podría ser:
 
   * A: 10% de los items, 70% del resultado
   * B: 25% de los items, 20% del resultado
@@ -77,11 +77,11 @@ Para poder obtener la clasificación ABC necesitamos lo siguiente:
 # Implementandolo en Excel
 Para implementarlo en Excel debemos de seguir las mismas indicaciones que nos dice la teoría, a continuación revisaremos el paso a paso:
 
-  1. Como primer punto necesitamos la tabla con una columna con la variable que queremos clasificar y una columna numérica que servirá para realizar la clasificación. Una vez tengamos la tabla, debemos de ordenar de mayor a menor la columna númerica.
+  1. Como primer punto necesitamos la tabla con una columna con la variable que queremos clasificar y una columna numérica que servirá para realizar la clasificación. Una vez tengamos la tabla, debemos de ordenar de mayor a menor la columna numérica.
   
 ![Ordenar de mayor a menor](/post/clasificacion-abc/index_files/Ordenar-mayor-a-menor.png)
   
-  2. Luego debemos de generar una columna que guarde el valor acumulado para cada una de las categorias que queremos revisar. En este caso utilizamos la formula `IFERROR(E2+F1,E2)` si estamos en Excel en ingles o `SI.ERROR(E2+F1,E2)` en español. Esta formula lo que esta haciendo es tomar el valor que existe en la columna numerica y le suma el valor previo para generar el acumulado. En caso de generar error unicamente devuelve el valor númerico, este caso solo ocurre en la primera fila de la columna ya que estamos sumando texto con un número.
+  2. Luego debemos de generar una columna que guarde el valor acumulado para cada una de las categorias que queremos revisar. En este caso utilizamos la formula `IFERROR(E2+F1,E2)` si estamos en Excel en ingles o `SI.ERROR(E2+F1,E2)` en español. Esta formula lo que esta haciendo es tomar el valor que existe en la columna numérica y le suma el valor previo para generar el acumulado. En caso de generar error únicamente devuelve el valor numérico, este caso solo ocurre en la primera fila de la columna ya que estamos sumando texto con un número.
   
   
 ![Acumulado de appearances](/post/clasificacion-abc/index_files/Acumulado_apariciones.png)
@@ -91,16 +91,16 @@ Para implementarlo en Excel debemos de seguir las mismas indicaciones que nos di
   
 ![Porcentaje acumulado](/post/clasificacion-abc/index_files/pct_acumulado.png)
   
-4. Como paso final antes de pasar al análisis, debemos de crear la columna que nos clasificara nuestros items. Para esto generamos una formula `IF` en donde clasificacmos como **A al % acumulado menor al 80%**, **B al que es menor al 95%** y **C al restante**. La formula a utilizar en Excel es `IF( [@[Porcentaje Acumulado]] < 0.8, "A", IF( [@[Porcentaje Acumulado]]  < 0.95 , "B", "C") )` y en español utilizamos la fórmula `SI`
+4. Como paso final antes de pasar al análisis, debemos de crear la columna que nos clasificara nuestros items. Para esto generamos una formula `IF` en donde clasificamos como **A al % acumulado menor al 80%**, **B al que es menor al 95%** y **C al restante**. La formula a utilizar en Excel es `IF( [@[Porcentaje Acumulado]] < 0.8, "A", IF( [@[Porcentaje Acumulado]]  < 0.95 , "B", "C") )` y en español utilizamos la fórmula `SI`
 
-Una vez terminada la clasificación de los items de interés, ahora procedemos a analizar los resultados. En este caso, los resultados obtenidos en este análisis siguen casi al pie de la letra el enunciado de pareto. En donde el 19.6% de los personajes analizados tienen el 80% de las apariciones. Luego en la segunda categoria tenemos que el 33.4% de los personajes tienen el 15% de las apariciones y el restante 47% el 5% de las apariciones restantes.
+Una vez terminada la clasificación de los items de interés, ahora procedemos a analizar los resultados. En este caso, los resultados obtenidos en este análisis siguen casi al pie de la letra el enunciado de pareto. En donde el 19.6% de los personajes analizados tienen el 80% de las apariciones. Luego en la segunda categoría tenemos que el 33.4% de los personajes tienen el 15% de las apariciones y el restante 47% el 5% de las apariciones restantes.
 
 ![Resultados ABC](/post/clasificacion-abc/index_files/clasificacion_abc.png)
 
   
-En algunos casos estos datos no nos dan mucho insight sobre lo que esta pasando. En este caso especifico contamos con la clasificación de alineación de los personajes en la mayoria de los casos, por lo que lo incluimos al análisis. Ahora encontramos algunos detalles interesantes, como que los personajes buenos son los que mayor cantidad de apariciones se llevan en las categoria ABC de apariciones **A y B**. Cabe destacar tambien que más de la mitad de las apariciones que tenemos en este conjunto de datos son de personajes buenos. 
+En algunos casos estos datos no nos dan mucho insight sobre lo que esta pasando. En este caso especifico contamos con la clasificación de alineación de los personajes en la mayoría de los casos, por lo que lo incluimos al análisis. Ahora encontramos algunos detalles interesantes, como que los personajes buenos son los que mayor cantidad de apariciones se llevan en las categoría ABC de apariciones **A y B**. Cabe destacar también que más de la mitad de las apariciones que tenemos en este conjunto de datos son de personajes buenos. 
 
-En este análisis, que no es una decisión de negocio la que esta en juego, no ganamos muchos insights, pero para una nueva empresa de comics puede servir como una guia de como debemos de presentar a los protagonistas a la hora de escribir las propias, o bien voltear los papeles para alterar los flujos de la historia usualmente presentada por la competencia.
+En este análisis, que no es una decisión de negocio la que esta en juego, no ganamos muchos insights, pero para una nueva empresa de cómics puede servir como una guía de como debemos de presentar a los protagonistas a la hora de escribir las propias, o bien voltear los papeles para alterar los flujos de la historia usualmente presentada por la competencia.
 
 ![Resultados ABC alineación](/post/clasificacion-abc/index_files/buenos_malos_abc.png)
 
