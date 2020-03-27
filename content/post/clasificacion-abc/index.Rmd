@@ -9,7 +9,7 @@ tags:
   - ABC
   - Pareto
 subtitle: ''
-summary: 'En esta entrada exploraremos el concepto de una clasificación ABC, para qué nos puede servir, qué requisitos básicos debemos cumplir y c+omo podemos implementar este tipo de análisis en excel.'
+summary: 'En esta entrada exploraremos el concepto de una clasificación ABC, para qué nos puede servir, qué requisitos básicos debemos cumplir y cómo podemos implementar este tipo de análisis en excel.'
 authors: []
 lastmod: '2020-03-11T20:56:27-06:00'
 featured: no
