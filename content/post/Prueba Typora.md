@@ -12,4 +12,4 @@ Funciona o no funciona
 
 ![image-20200326195042453](C:\Users\bsma_\AppData\Roaming\Typora\typora-user-images\image-20200326195042453.png)
 
-![imagen](\post\clasificacion-abc\index_files\ABC.png)
+![imagen](/post/clasificacion-abc/index_files/ABC.png)
