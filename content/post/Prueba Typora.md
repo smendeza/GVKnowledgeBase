@@ -1,8 +1,8 @@
 ---
-title: Clasificación ABC - XYZ
+title: Prueba Typora
 author: Saúl Méndez
 date: '2020-03-13'
-slug: clasificacion-abc-xyz
+slug: typora
 categories:
   - Análisis descriptivo
 ---
