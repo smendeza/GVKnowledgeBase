@@ -9,7 +9,7 @@ tags:
   - ABC
   - Pareto
 subtitle: ''
-summary: 'En esta entrada exploraremos el concepto de una clasificación ABC, para que nos puede servir, que requisitos básicos debemos cumplir y como podemos implementar este tipo de análisis en excel.'
+summary: 'En esta entrada exploraremos el concepto de una clasificación ABC, para qué nos puede servir, qué requisitos básicos debemos cumplir y cómo podemos implementar este tipo de análisis en excel.'
 authors: []
 lastmod: '2020-03-11T20:56:27-06:00'
 featured: no
@@ -20,6 +20,7 @@ image:
 projects: ["Análisis descriptivo"]
 ---
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <div id="qué-es-la-clasificación-abc-y-para-que-nos-sirve" class="section level1">
@@ -32,7 +33,7 @@ projects: ["Análisis descriptivo"]
 <li>B: 30% de los items, 15% del resultado</li>
 <li>C: 50% de los items, 5% del resultado</li>
 </ul>
-<p>El ejemplo anterior es el estándar utilizado en la mayoría de los análisis, pero tambien es permitido utilizar otros enfoques dependiendo de como sea la distribución de los items y el resultado. Un ejemplo podría ser:</p>
+<p>El ejemplo anterior es el estándar utilizado en la mayoría de los análisis, pero también es permitido utilizar otros enfoques dependiendo de como sea la distribución de los items y el resultado. Un ejemplo podría ser:</p>
 <ul>
 <li>A: 10% de los items, 70% del resultado</li>
 <li>B: 25% de los items, 20% del resultado</li>
@@ -58,7 +59,7 @@ projects: ["Análisis descriptivo"]
 </ul></li>
 </ul>
 <div class="figure">
-<img src="/post/clasificacion-abc/index_files/venta_cliente.png" alt="Venta cliente" />
+<img src="/post/clasificacion-abc/index_files/venta_cliente.png" alt="" />
 <p class="caption">Venta cliente</p>
 </div>
 <p>El motivo por el que realizamos una tabla con información resumida a nivel de cliente y no a nivel transaccional es por que necesitamos conocer cual es el desempeño global de los clientes. Si se hiciese a nivel transaccional, el análisis perdería sentido si queremos clasificar clientes, porque estos se repetirían varias veces y perderíamos de vista el impacto consolidado. En el caso de hacerlo a nivel transaccional lo que se debería de estar analizando en un ABC seria eso, las <strong>transacciones</strong> y no los <strong>clientes</strong></p>
@@ -83,38 +84,38 @@ projects: ["Análisis descriptivo"]
 <h1>Implementandolo en Excel</h1>
 <p>Para implementarlo en Excel debemos de seguir las mismas indicaciones que nos dice la teoría, a continuación revisaremos el paso a paso:</p>
 <ol style="list-style-type: decimal">
-<li>Como primer punto necesitamos la tabla con una columna con la variable que queremos clasificar y una columna numérica que servirá para realizar la clasificación. Una vez tengamos la tabla, debemos de ordenar de mayor a menor la columna númerica.</li>
+<li>Como primer punto necesitamos la tabla con una columna con la variable que queremos clasificar y una columna numérica que servirá para realizar la clasificación. Una vez tengamos la tabla, debemos de ordenar de mayor a menor la columna numérica.</li>
 </ol>
 <div class="figure">
-<img src="/post/clasificacion-abc/index_files/Ordenar-mayor-a-menor.png" alt="Ordenar de mayor a menor" />
+<img src="/post/clasificacion-abc/index_files/Ordenar-mayor-a-menor.png" alt="" />
 <p class="caption">Ordenar de mayor a menor</p>
 </div>
 <ol start="2" style="list-style-type: decimal">
-<li>Luego debemos de generar una columna que guarde el valor acumulado para cada una de las categorias que queremos revisar. En este caso utilizamos la formula <code>IFERROR(E2+F1,E2)</code> si estamos en Excel en ingles o <code>SI.ERROR(E2+F1,E2)</code> en español. Esta formula lo que esta haciendo es tomar el valor que existe en la columna numerica y le suma el valor previo para generar el acumulado. En caso de generar error unicamente devuelve el valor númerico, este caso solo ocurre en la primera fila de la columna ya que estamos sumando texto con un número.</li>
+<li>Luego debemos de generar una columna que guarde el valor acumulado para cada una de las categorias que queremos revisar. En este caso utilizamos la formula <code>IFERROR(E2+F1,E2)</code> si estamos en Excel en ingles o <code>SI.ERROR(E2+F1,E2)</code> en español. Esta formula lo que esta haciendo es tomar el valor que existe en la columna numérica y le suma el valor previo para generar el acumulado. En caso de generar error únicamente devuelve el valor numérico, este caso solo ocurre en la primera fila de la columna ya que estamos sumando texto con un número.</li>
 </ol>
 <div class="figure">
-<img src="/post/clasificacion-abc/index_files/Acumulado_apariciones.png" alt="Acumulado de appearances" />
+<img src="/post/clasificacion-abc/index_files/Acumulado_apariciones.png" alt="" />
 <p class="caption">Acumulado de appearances</p>
 </div>
 <ol start="3" style="list-style-type: decimal">
 <li>Como siguiente paso, debemos de crear una columna que nos devuelva el porcentaje acumulado de la variable que estamos analizando. En este caso tomamos el valor que aparece en la columna de <code>valor acumulado</code> y lo dividimos por el <code>valor total</code> de la columna.</li>
 </ol>
 <div class="figure">
-<img src="/post/clasificacion-abc/index_files/pct_acumulado.png" alt="Porcentaje acumulado" />
+<img src="/post/clasificacion-abc/index_files/pct_acumulado.png" alt="" />
 <p class="caption">Porcentaje acumulado</p>
 </div>
 <ol start="4" style="list-style-type: decimal">
-<li>Como paso final antes de pasar al análisis, debemos de crear la columna que nos clasificara nuestros items. Para esto generamos una formula <code>IF</code> en donde clasificacmos como <strong>A al % acumulado menor al 80%</strong>, <strong>B al que es menor al 95%</strong> y <strong>C al restante</strong>. La formula a utilizar en Excel es <code>IF( [@[Porcentaje Acumulado]] &lt; 0.8, "A", IF( [@[Porcentaje Acumulado]]  &lt; 0.95 , "B", "C") )</code> y en español utilizamos la fórmula <code>SI</code></li>
+<li>Como paso final antes de pasar al análisis, debemos de crear la columna que nos clasificara nuestros items. Para esto generamos una formula <code>IF</code> en donde clasificamos como <strong>A al % acumulado menor al 80%</strong>, <strong>B al que es menor al 95%</strong> y <strong>C al restante</strong>. La formula a utilizar en Excel es <code>IF( [@[Porcentaje Acumulado]] &lt; 0.8, "A", IF( [@[Porcentaje Acumulado]]  &lt; 0.95 , "B", "C") )</code> y en español utilizamos la fórmula <code>SI</code></li>
 </ol>
-<p>Una vez terminada la clasificación de los items de interés, ahora procedemos a analizar los resultados. En este caso, los resultados obtenidos en este análisis siguen casi al pie de la letra el enunciado de pareto. En donde el 19.6% de los personajes analizados tienen el 80% de las apariciones. Luego en la segunda categoria tenemos que el 33.4% de los personajes tienen el 15% de las apariciones y el restante 47% el 5% de las apariciones restantes.</p>
+<p>Una vez terminada la clasificación de los items de interés, ahora procedemos a analizar los resultados. En este caso, los resultados obtenidos en este análisis siguen casi al pie de la letra el enunciado de pareto. En donde el 19.6% de los personajes analizados tienen el 80% de las apariciones. Luego en la segunda categoría tenemos que el 33.4% de los personajes tienen el 15% de las apariciones y el restante 47% el 5% de las apariciones restantes.</p>
 <div class="figure">
-<img src="/post/clasificacion-abc/index_files/clasificacion_abc.png" alt="Resultados ABC" />
+<img src="/post/clasificacion-abc/index_files/clasificacion_abc.png" alt="" />
 <p class="caption">Resultados ABC</p>
 </div>
-<p>En algunos casos estos datos no nos dan mucho insight sobre lo que esta pasando. En este caso especifico contamos con la clasificación de alineación de los personajes en la mayoria de los casos, por lo que lo incluimos al análisis. Ahora encontramos algunos detalles interesantes, como que los personajes buenos son los que mayor cantidad de apariciones se llevan en las categoria ABC de apariciones <strong>A y B</strong>. Cabe destacar tambien que más de la mitad de las apariciones que tenemos en este conjunto de datos son de personajes buenos.</p>
-<p>En este análisis, que no es una decisión de negocio la que esta en juego, no ganamos muchos insights, pero para una nueva empresa de comics puede servir como una guia de como debemos de presentar a los protagonistas a la hora de escribir las propias, o bien voltear los papeles para alterar los flujos de la historia usualmente presentada por la competencia.</p>
+<p>En algunos casos estos datos no nos dan mucho insight sobre lo que esta pasando. En este caso especifico contamos con la clasificación de alineación de los personajes en la mayoría de los casos, por lo que lo incluimos al análisis. Ahora encontramos algunos detalles interesantes, como que los personajes buenos son los que mayor cantidad de apariciones se llevan en las categoría ABC de apariciones <strong>A y B</strong>. Cabe destacar también que más de la mitad de las apariciones que tenemos en este conjunto de datos son de personajes buenos.</p>
+<p>En este análisis, que no es una decisión de negocio la que esta en juego, no ganamos muchos insights, pero para una nueva empresa de cómics puede servir como una guía de como debemos de presentar a los protagonistas a la hora de escribir las propias, o bien voltear los papeles para alterar los flujos de la historia usualmente presentada por la competencia.</p>
 <div class="figure">
-<img src="/post/clasificacion-abc/index_files/buenos_malos_abc.png" alt="Resultados ABC alineación" />
+<img src="/post/clasificacion-abc/index_files/buenos_malos_abc.png" alt="" />
 <p class="caption">Resultados ABC alineación</p>
 </div>
 </div>
@@ -135,6 +136,6 @@ projects: ["Análisis descriptivo"]
 <div class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Esta usualmente es categórica<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn1"><p>Esta usualmente es categórica<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>

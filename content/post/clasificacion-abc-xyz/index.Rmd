@@ -41,7 +41,7 @@ Para poder implementar este análisis necesitamos
   
   * Ventas de los últimos 12 meses (U12M)
   * Valor de las existencias actuales
-  * Identificar a los productos de nuevo ingreso, para excluirlos del análisis. ¿Por qué se excluyen) 
+  * Identificar a los productos de nuevo ingreso, para excluirlos del análisis (menor a 1 año de introducción). Los excluimos debido a que se puede dar el caso de sobreestimación o subestimación de la demanda, por lo que se recomienda realizar un análisis por separado para estos casos
 
 Los pasos que debemos de seguir para poder implementar este tipo de análisis son los siguientes:
 

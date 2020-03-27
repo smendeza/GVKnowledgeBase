@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="Es una herramienta utilizada usualmente para el establecimiento de políticas de administración de inventario a través del establecimiento de niveles de servicio basados en la volatilidad de la venta y la contribución al total de ventas de cada sku.">
+  <meta name="description" content="Es una herramienta utilizada usualmente para el establecimiento de políticas de administración de inventario a través de niveles de servicio basados en la volatilidad de la venta y la contribución al total de ventas de cada sku.">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/clasificacion-abc-xyz/">
@@ -272,13 +272,13 @@
   <meta property="og:site_name" content="GV Knowledge Base">
   <meta property="og:url" content="/post/clasificacion-abc-xyz/">
   <meta property="og:title" content="Clasificación ABC - XYZ | GV Knowledge Base">
-  <meta property="og:description" content="Es una herramienta utilizada usualmente para el establecimiento de políticas de administración de inventario a través del establecimiento de niveles de servicio basados en la volatilidad de la venta y la contribución al total de ventas de cada sku."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:square]">
+  <meta property="og:description" content="Es una herramienta utilizada usualmente para el establecimiento de políticas de administración de inventario a través de niveles de servicio basados en la volatilidad de la venta y la contribución al total de ventas de cada sku."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:square]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:square]"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2020-03-13T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-03-13T14:58:33-06:00">
+    <meta property="article:modified_time" content="2020-03-26T19:44:04-06:00">
   
 
   
@@ -307,7 +307,7 @@
   "headline": "Clasificación ABC - XYZ",
   
   "datePublished": "2020-03-13T00:00:00Z",
-  "dateModified": "2020-03-13T14:58:33-06:00",
+  "dateModified": "2020-03-26T19:44:04-06:00",
   
   "author": {
     "@type": "Person",
@@ -322,7 +322,7 @@
       "url": "/images/icon_hu628c6d1358ca9fd145d92655d5449526_40681_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Es una herramienta utilizada usualmente para el establecimiento de políticas de administración de inventario a través del establecimiento de niveles de servicio basados en la volatilidad de la venta y la contribución al total de ventas de cada sku."
+  "description": "Es una herramienta utilizada usualmente para el establecimiento de políticas de administración de inventario a través de niveles de servicio basados en la volatilidad de la venta y la contribución al total de ventas de cada sku."
 }
 </script>
 
@@ -617,7 +617,7 @@
           Last updated on
       
     
-    Mar 13, 2020
+    Mar 26, 2020
   </span>
   
 
@@ -667,26 +667,27 @@
 
     <div class="article-style">
       
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
-<p>Es una herramienta utilizada usualmente para el establecimiento de políticas de administración de inventario a través del establecimiento de niveles de servicio basados en la volatilidad de la venta y la contribución al total de ventas de cada sku.</p>
-<p>En la clasificacion XYZ se establece un estándar de nivel de servicio, <a href="https://saulm.netlify.com/post/coeficiente-de-variacion/">en la entrada</a> en donde explicamos en que consiste este análisis, no nos aventuramos a verificar cual sería el efecto de tener un nivel de servicio del 100% en todos los skus. Hagamos el siguiente ejercicio mental: Supongamos que un cliente nos pregunta porque no tomar este enfoque y tu siendo un consultor que entiende el efecto le responde:</p>
+<p>Es una herramienta utilizada usualmente para el establecimiento de políticas de administración de inventario a través de niveles de servicio basados en la volatilidad de la venta y la contribución al total de ventas de cada sku.</p>
+<p>En la clasificacion XYZ se establece un estándar de nivel de servicio, <a href="https://saulm.netlify.com/post/coeficiente-de-variacion/">en la entrada</a> en donde explicamos en qué consiste este análisis, no nos aventuramos a verificar cuál sería el efecto de tener un nivel de servicio del 100% en todos los skus. Hagamos el siguiente ejercicio mental: Supongamos que un cliente nos pregunta porqué no tomar este enfoque y tú siendo un consultor que entiende el efecto le respondes:</p>
 <blockquote>
-<p>Si realizamos este tipo de estrategia para todo el inventario, estariamos elevando las cobertutras de inventario de productos que su contribución al volumen de venta no justifique el costo de oportunidad de mantener una unidad extra en inventario, implicando un costo de inversión mucho más grande de lo necesario.</p>
+<p>Si realizamos este tipo de estrategia para todo el inventario, encontraríamos los productos de poca rotación, los cuales podríamos intercambiarlos por productos con más demanda del mercado, mejorando nuestro costo de oportunidad y generar un ahorro en el proceso de compras.</p>
 </blockquote>
-<p>Luego de un momento de silencio vienes y le propones lo siguiente:</p>
+<p>Para añadir más información, puedes agregar lo siguiente:</p>
 <blockquote>
 <p>Podemos afinar la estrategia de niveles de servicio incluyendo una clasificación adicional que nos ayude a identificar los skus por nivel de contribución a la venta total y generar estrategías personalizadas para cada uno de los distintos casos que nos podemos encontrar.</p>
 </blockquote>
-<p>Para poder cumplir con la promesa anterior, vienes y le muestras la siguiente tabla, que resumen el nivel de servicio que estariamos recomendando mantener para cada producto</p>
+<p>Y para poder cumplir con la promesa anterior, presentas la siguiente tabla, que resume el nivel de servicio que estaríamos recomendando mantener para cada producto</p>
 <p><strong>INSERTAR TABLA RESUMEN ABC-XYZ</strong></p>
 <div id="implementación" class="section level1">
 <h1>Implementación</h1>
 <p>Para poder implementar este análisis necesitamos</p>
 <ul>
-<li>Ventas de los U12M</li>
+<li>Ventas de los últimos 12 meses (U12M)</li>
 <li>Valor de las existencias actuales</li>
-<li>Identificar a los productos de nuevo ingreso, para excluirlos del análisis.</li>
+<li>Identificar a los productos de nuevo ingreso, para excluirlos del análisis (menor a 1 año de introducción). Los excluimos debido a que se puede dar el caso de sobreestimación o subestimación de la demanda, por lo que se recomienda realizar un análisis por separado para estos casos</li>
 </ul>
 <p>Los pasos que debemos de seguir para poder implementar este tipo de análisis son los siguientes:</p>
 <ul>
@@ -768,7 +769,8 @@
 </table>
 <p>Una vez cargado el análisis, corremos la lógica del ABC y XYZ y creamos las clasificaciones correspondientes. Esto nos permitirá elaborar la siguiente gráfica:</p>
 <p><img src="/post/clasificacion-abc-xyz/index_files/figure-html/imagen-1.png" width="672" /></p>
-<p>Para cada uno de los cuadrantes que estamos observanco en la gráfica, recomendamos distintos niveles de servicio. Si análizamos el resultado, podemos observar…</p>
+<p>(Explicación de la gráfica)
+Para cada uno de los cuadrantes que estamos observanco en la gráfica, recomendamos distintos niveles de servicio. Si análizamos el resultado, podemos observar…</p>
 </div>
 
     </div>

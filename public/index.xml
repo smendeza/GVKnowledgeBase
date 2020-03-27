@@ -40,26 +40,27 @@
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
       <guid>/post/clasificacion-abc-xyz/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;p&gt;Es una herramienta utilizada usualmente para el establecimiento de políticas de administración de inventario a través del establecimiento de niveles de servicio basados en la volatilidad de la venta y la contribución al total de ventas de cada sku.&lt;/p&gt;
-&lt;p&gt;En la clasificacion XYZ se establece un estándar de nivel de servicio, &lt;a href=&#34;https://saulm.netlify.com/post/coeficiente-de-variacion/&#34;&gt;en la entrada&lt;/a&gt; en donde explicamos en que consiste este análisis, no nos aventuramos a verificar cual sería el efecto de tener un nivel de servicio del 100% en todos los skus. Hagamos el siguiente ejercicio mental: Supongamos que un cliente nos pregunta porque no tomar este enfoque y tu siendo un consultor que entiende el efecto le responde:&lt;/p&gt;
+&lt;p&gt;Es una herramienta utilizada usualmente para el establecimiento de políticas de administración de inventario a través de niveles de servicio basados en la volatilidad de la venta y la contribución al total de ventas de cada sku.&lt;/p&gt;
+&lt;p&gt;En la clasificacion XYZ se establece un estándar de nivel de servicio, &lt;a href=&#34;https://saulm.netlify.com/post/coeficiente-de-variacion/&#34;&gt;en la entrada&lt;/a&gt; en donde explicamos en qué consiste este análisis, no nos aventuramos a verificar cuál sería el efecto de tener un nivel de servicio del 100% en todos los skus. Hagamos el siguiente ejercicio mental: Supongamos que un cliente nos pregunta porqué no tomar este enfoque y tú siendo un consultor que entiende el efecto le respondes:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Si realizamos este tipo de estrategia para todo el inventario, estariamos elevando las cobertutras de inventario de productos que su contribución al volumen de venta no justifique el costo de oportunidad de mantener una unidad extra en inventario, implicando un costo de inversión mucho más grande de lo necesario.&lt;/p&gt;
+&lt;p&gt;Si realizamos este tipo de estrategia para todo el inventario, encontraríamos los productos de poca rotación, los cuales podríamos intercambiarlos por productos con más demanda del mercado, mejorando nuestro costo de oportunidad y generar un ahorro en el proceso de compras.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Luego de un momento de silencio vienes y le propones lo siguiente:&lt;/p&gt;
+&lt;p&gt;Para añadir más información, puedes agregar lo siguiente:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Podemos afinar la estrategia de niveles de servicio incluyendo una clasificación adicional que nos ayude a identificar los skus por nivel de contribución a la venta total y generar estrategías personalizadas para cada uno de los distintos casos que nos podemos encontrar.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Para poder cumplir con la promesa anterior, vienes y le muestras la siguiente tabla, que resumen el nivel de servicio que estariamos recomendando mantener para cada producto&lt;/p&gt;
+&lt;p&gt;Y para poder cumplir con la promesa anterior, presentas la siguiente tabla, que resume el nivel de servicio que estaríamos recomendando mantener para cada producto&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;INSERTAR TABLA RESUMEN ABC-XYZ&lt;/strong&gt;&lt;/p&gt;
 &lt;div id=&#34;implementación&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Implementación&lt;/h1&gt;
 &lt;p&gt;Para poder implementar este análisis necesitamos&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Ventas de los U12M&lt;/li&gt;
+&lt;li&gt;Ventas de los últimos 12 meses (U12M)&lt;/li&gt;
 &lt;li&gt;Valor de las existencias actuales&lt;/li&gt;
-&lt;li&gt;Identificar a los productos de nuevo ingreso, para excluirlos del análisis.&lt;/li&gt;
+&lt;li&gt;Identificar a los productos de nuevo ingreso, para excluirlos del análisis (menor a 1 año de introducción). Los excluimos debido a que se puede dar el caso de sobreestimación o subestimación de la demanda, por lo que se recomienda realizar un análisis por separado para estos casos&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Los pasos que debemos de seguir para poder implementar este tipo de análisis son los siguientes:&lt;/p&gt;
 &lt;ul&gt;
@@ -141,7 +142,8 @@
 &lt;/table&gt;
 &lt;p&gt;Una vez cargado el análisis, corremos la lógica del ABC y XYZ y creamos las clasificaciones correspondientes. Esto nos permitirá elaborar la siguiente gráfica:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/post/clasificacion-abc-xyz/index_files/figure-html/imagen-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Para cada uno de los cuadrantes que estamos observanco en la gráfica, recomendamos distintos niveles de servicio. Si análizamos el resultado, podemos observar…&lt;/p&gt;
+&lt;p&gt;(Explicación de la gráfica)
+Para cada uno de los cuadrantes que estamos observanco en la gráfica, recomendamos distintos niveles de servicio. Si análizamos el resultado, podemos observar…&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -213,6 +215,20 @@ Para cada SKU&lt;/li&gt;
 &lt;li&gt;Realizar la clasificación XYZ&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Prueba Typora</title>
+      <link>/post/typora/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/post/typora/</guid>
+      <description>&lt;h1 id=&#34;prueba-typora&#34;&gt;Prueba Typora&lt;/h1&gt;
+&lt;p&gt;Funciona o no funciona&lt;/p&gt;
+&lt;p&gt;$$
+\frac{ln(2)}{ln(\frac{N_{t}}{N_{t-0}})}
+$$
+&lt;img src=&#34;/post/clasificacion-abc/index_files/ABC.png&#34; alt=&#34;imagen&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -329,6 +345,7 @@ Para cada SKU&lt;/li&gt;
       <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
       <guid>/post/clasificacion-abc-pareto/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;qué-es-la-clasificación-abc-y-para-que-nos-sirve&#34; class=&#34;section level1&#34;&gt;
@@ -341,7 +358,7 @@ Para cada SKU&lt;/li&gt;
 &lt;li&gt;B: 30% de los items, 15% del resultado&lt;/li&gt;
 &lt;li&gt;C: 50% de los items, 5% del resultado&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;El ejemplo anterior es el estándar utilizado en la mayoría de los análisis, pero tambien es permitido utilizar otros enfoques dependiendo de como sea la distribución de los items y el resultado. Un ejemplo podría ser:&lt;/p&gt;
+&lt;p&gt;El ejemplo anterior es el estándar utilizado en la mayoría de los análisis, pero también es permitido utilizar otros enfoques dependiendo de como sea la distribución de los items y el resultado. Un ejemplo podría ser:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A: 10% de los items, 70% del resultado&lt;/li&gt;
 &lt;li&gt;B: 25% de los items, 20% del resultado&lt;/li&gt;
@@ -367,7 +384,7 @@ Para cada SKU&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/post/clasificacion-abc/index_files/venta_cliente.png&#34; alt=&#34;Venta cliente&#34; /&gt;
+&lt;img src=&#34;/post/clasificacion-abc/index_files/venta_cliente.png&#34; alt=&#34;&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Venta cliente&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;El motivo por el que realizamos una tabla con información resumida a nivel de cliente y no a nivel transaccional es por que necesitamos conocer cual es el desempeño global de los clientes. Si se hiciese a nivel transaccional, el análisis perdería sentido si queremos clasificar clientes, porque estos se repetirían varias veces y perderíamos de vista el impacto consolidado. En el caso de hacerlo a nivel transaccional lo que se debería de estar analizando en un ABC seria eso, las &lt;strong&gt;transacciones&lt;/strong&gt; y no los &lt;strong&gt;clientes&lt;/strong&gt;&lt;/p&gt;
@@ -392,38 +409,38 @@ Para cada SKU&lt;/li&gt;
 &lt;h1&gt;Implementandolo en Excel&lt;/h1&gt;
 &lt;p&gt;Para implementarlo en Excel debemos de seguir las mismas indicaciones que nos dice la teoría, a continuación revisaremos el paso a paso:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Como primer punto necesitamos la tabla con una columna con la variable que queremos clasificar y una columna numérica que servirá para realizar la clasificación. Una vez tengamos la tabla, debemos de ordenar de mayor a menor la columna númerica.&lt;/li&gt;
+&lt;li&gt;Como primer punto necesitamos la tabla con una columna con la variable que queremos clasificar y una columna numérica que servirá para realizar la clasificación. Una vez tengamos la tabla, debemos de ordenar de mayor a menor la columna numérica.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/post/clasificacion-abc/index_files/Ordenar-mayor-a-menor.png&#34; alt=&#34;Ordenar de mayor a menor&#34; /&gt;
+&lt;img src=&#34;/post/clasificacion-abc/index_files/Ordenar-mayor-a-menor.png&#34; alt=&#34;&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Ordenar de mayor a menor&lt;/p&gt;
 &lt;/div&gt;
 &lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Luego debemos de generar una columna que guarde el valor acumulado para cada una de las categorias que queremos revisar. En este caso utilizamos la formula &lt;code&gt;IFERROR(E2+F1,E2)&lt;/code&gt; si estamos en Excel en ingles o &lt;code&gt;SI.ERROR(E2+F1,E2)&lt;/code&gt; en español. Esta formula lo que esta haciendo es tomar el valor que existe en la columna numerica y le suma el valor previo para generar el acumulado. En caso de generar error unicamente devuelve el valor númerico, este caso solo ocurre en la primera fila de la columna ya que estamos sumando texto con un número.&lt;/li&gt;
+&lt;li&gt;Luego debemos de generar una columna que guarde el valor acumulado para cada una de las categorias que queremos revisar. En este caso utilizamos la formula &lt;code&gt;IFERROR(E2+F1,E2)&lt;/code&gt; si estamos en Excel en ingles o &lt;code&gt;SI.ERROR(E2+F1,E2)&lt;/code&gt; en español. Esta formula lo que esta haciendo es tomar el valor que existe en la columna numérica y le suma el valor previo para generar el acumulado. En caso de generar error únicamente devuelve el valor numérico, este caso solo ocurre en la primera fila de la columna ya que estamos sumando texto con un número.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/post/clasificacion-abc/index_files/Acumulado_apariciones.png&#34; alt=&#34;Acumulado de appearances&#34; /&gt;
+&lt;img src=&#34;/post/clasificacion-abc/index_files/Acumulado_apariciones.png&#34; alt=&#34;&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Acumulado de appearances&lt;/p&gt;
 &lt;/div&gt;
 &lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Como siguiente paso, debemos de crear una columna que nos devuelva el porcentaje acumulado de la variable que estamos analizando. En este caso tomamos el valor que aparece en la columna de &lt;code&gt;valor acumulado&lt;/code&gt; y lo dividimos por el &lt;code&gt;valor total&lt;/code&gt; de la columna.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/post/clasificacion-abc/index_files/pct_acumulado.png&#34; alt=&#34;Porcentaje acumulado&#34; /&gt;
+&lt;img src=&#34;/post/clasificacion-abc/index_files/pct_acumulado.png&#34; alt=&#34;&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Porcentaje acumulado&lt;/p&gt;
 &lt;/div&gt;
 &lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Como paso final antes de pasar al análisis, debemos de crear la columna que nos clasificara nuestros items. Para esto generamos una formula &lt;code&gt;IF&lt;/code&gt; en donde clasificacmos como &lt;strong&gt;A al % acumulado menor al 80%&lt;/strong&gt;, &lt;strong&gt;B al que es menor al 95%&lt;/strong&gt; y &lt;strong&gt;C al restante&lt;/strong&gt;. La formula a utilizar en Excel es &lt;code&gt;IF( [@[Porcentaje Acumulado]] &amp;lt; 0.8, &#34;A&#34;, IF( [@[Porcentaje Acumulado]]  &amp;lt; 0.95 , &#34;B&#34;, &#34;C&#34;) )&lt;/code&gt; y en español utilizamos la fórmula &lt;code&gt;SI&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Como paso final antes de pasar al análisis, debemos de crear la columna que nos clasificara nuestros items. Para esto generamos una formula &lt;code&gt;IF&lt;/code&gt; en donde clasificamos como &lt;strong&gt;A al % acumulado menor al 80%&lt;/strong&gt;, &lt;strong&gt;B al que es menor al 95%&lt;/strong&gt; y &lt;strong&gt;C al restante&lt;/strong&gt;. La formula a utilizar en Excel es &lt;code&gt;IF( [@[Porcentaje Acumulado]] &amp;lt; 0.8, &#34;A&#34;, IF( [@[Porcentaje Acumulado]]  &amp;lt; 0.95 , &#34;B&#34;, &#34;C&#34;) )&lt;/code&gt; y en español utilizamos la fórmula &lt;code&gt;SI&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Una vez terminada la clasificación de los items de interés, ahora procedemos a analizar los resultados. En este caso, los resultados obtenidos en este análisis siguen casi al pie de la letra el enunciado de pareto. En donde el 19.6% de los personajes analizados tienen el 80% de las apariciones. Luego en la segunda categoria tenemos que el 33.4% de los personajes tienen el 15% de las apariciones y el restante 47% el 5% de las apariciones restantes.&lt;/p&gt;
+&lt;p&gt;Una vez terminada la clasificación de los items de interés, ahora procedemos a analizar los resultados. En este caso, los resultados obtenidos en este análisis siguen casi al pie de la letra el enunciado de pareto. En donde el 19.6% de los personajes analizados tienen el 80% de las apariciones. Luego en la segunda categoría tenemos que el 33.4% de los personajes tienen el 15% de las apariciones y el restante 47% el 5% de las apariciones restantes.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/post/clasificacion-abc/index_files/clasificacion_abc.png&#34; alt=&#34;Resultados ABC&#34; /&gt;
+&lt;img src=&#34;/post/clasificacion-abc/index_files/clasificacion_abc.png&#34; alt=&#34;&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Resultados ABC&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;En algunos casos estos datos no nos dan mucho insight sobre lo que esta pasando. En este caso especifico contamos con la clasificación de alineación de los personajes en la mayoria de los casos, por lo que lo incluimos al análisis. Ahora encontramos algunos detalles interesantes, como que los personajes buenos son los que mayor cantidad de apariciones se llevan en las categoria ABC de apariciones &lt;strong&gt;A y B&lt;/strong&gt;. Cabe destacar tambien que más de la mitad de las apariciones que tenemos en este conjunto de datos son de personajes buenos.&lt;/p&gt;
-&lt;p&gt;En este análisis, que no es una decisión de negocio la que esta en juego, no ganamos muchos insights, pero para una nueva empresa de comics puede servir como una guia de como debemos de presentar a los protagonistas a la hora de escribir las propias, o bien voltear los papeles para alterar los flujos de la historia usualmente presentada por la competencia.&lt;/p&gt;
+&lt;p&gt;En algunos casos estos datos no nos dan mucho insight sobre lo que esta pasando. En este caso especifico contamos con la clasificación de alineación de los personajes en la mayoría de los casos, por lo que lo incluimos al análisis. Ahora encontramos algunos detalles interesantes, como que los personajes buenos son los que mayor cantidad de apariciones se llevan en las categoría ABC de apariciones &lt;strong&gt;A y B&lt;/strong&gt;. Cabe destacar también que más de la mitad de las apariciones que tenemos en este conjunto de datos son de personajes buenos.&lt;/p&gt;
+&lt;p&gt;En este análisis, que no es una decisión de negocio la que esta en juego, no ganamos muchos insights, pero para una nueva empresa de cómics puede servir como una guía de como debemos de presentar a los protagonistas a la hora de escribir las propias, o bien voltear los papeles para alterar los flujos de la historia usualmente presentada por la competencia.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/post/clasificacion-abc/index_files/buenos_malos_abc.png&#34; alt=&#34;Resultados ABC alineación&#34; /&gt;
+&lt;img src=&#34;/post/clasificacion-abc/index_files/buenos_malos_abc.png&#34; alt=&#34;&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Resultados ABC alineación&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -444,7 +461,7 @@ Para cada SKU&lt;/li&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Esta usualmente es categórica&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Esta usualmente es categórica&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

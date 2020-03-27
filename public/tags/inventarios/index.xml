@@ -18,26 +18,27 @@
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
       <guid>/post/clasificacion-abc-xyz/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;p&gt;Es una herramienta utilizada usualmente para el establecimiento de políticas de administración de inventario a través del establecimiento de niveles de servicio basados en la volatilidad de la venta y la contribución al total de ventas de cada sku.&lt;/p&gt;
-&lt;p&gt;En la clasificacion XYZ se establece un estándar de nivel de servicio, &lt;a href=&#34;https://saulm.netlify.com/post/coeficiente-de-variacion/&#34;&gt;en la entrada&lt;/a&gt; en donde explicamos en que consiste este análisis, no nos aventuramos a verificar cual sería el efecto de tener un nivel de servicio del 100% en todos los skus. Hagamos el siguiente ejercicio mental: Supongamos que un cliente nos pregunta porque no tomar este enfoque y tu siendo un consultor que entiende el efecto le responde:&lt;/p&gt;
+&lt;p&gt;Es una herramienta utilizada usualmente para el establecimiento de políticas de administración de inventario a través de niveles de servicio basados en la volatilidad de la venta y la contribución al total de ventas de cada sku.&lt;/p&gt;
+&lt;p&gt;En la clasificacion XYZ se establece un estándar de nivel de servicio, &lt;a href=&#34;https://saulm.netlify.com/post/coeficiente-de-variacion/&#34;&gt;en la entrada&lt;/a&gt; en donde explicamos en qué consiste este análisis, no nos aventuramos a verificar cuál sería el efecto de tener un nivel de servicio del 100% en todos los skus. Hagamos el siguiente ejercicio mental: Supongamos que un cliente nos pregunta porqué no tomar este enfoque y tú siendo un consultor que entiende el efecto le respondes:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Si realizamos este tipo de estrategia para todo el inventario, estariamos elevando las cobertutras de inventario de productos que su contribución al volumen de venta no justifique el costo de oportunidad de mantener una unidad extra en inventario, implicando un costo de inversión mucho más grande de lo necesario.&lt;/p&gt;
+&lt;p&gt;Si realizamos este tipo de estrategia para todo el inventario, encontraríamos los productos de poca rotación, los cuales podríamos intercambiarlos por productos con más demanda del mercado, mejorando nuestro costo de oportunidad y generar un ahorro en el proceso de compras.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Luego de un momento de silencio vienes y le propones lo siguiente:&lt;/p&gt;
+&lt;p&gt;Para añadir más información, puedes agregar lo siguiente:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Podemos afinar la estrategia de niveles de servicio incluyendo una clasificación adicional que nos ayude a identificar los skus por nivel de contribución a la venta total y generar estrategías personalizadas para cada uno de los distintos casos que nos podemos encontrar.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Para poder cumplir con la promesa anterior, vienes y le muestras la siguiente tabla, que resumen el nivel de servicio que estariamos recomendando mantener para cada producto&lt;/p&gt;
+&lt;p&gt;Y para poder cumplir con la promesa anterior, presentas la siguiente tabla, que resume el nivel de servicio que estaríamos recomendando mantener para cada producto&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;INSERTAR TABLA RESUMEN ABC-XYZ&lt;/strong&gt;&lt;/p&gt;
 &lt;div id=&#34;implementación&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Implementación&lt;/h1&gt;
 &lt;p&gt;Para poder implementar este análisis necesitamos&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Ventas de los U12M&lt;/li&gt;
+&lt;li&gt;Ventas de los últimos 12 meses (U12M)&lt;/li&gt;
 &lt;li&gt;Valor de las existencias actuales&lt;/li&gt;
-&lt;li&gt;Identificar a los productos de nuevo ingreso, para excluirlos del análisis.&lt;/li&gt;
+&lt;li&gt;Identificar a los productos de nuevo ingreso, para excluirlos del análisis (menor a 1 año de introducción). Los excluimos debido a que se puede dar el caso de sobreestimación o subestimación de la demanda, por lo que se recomienda realizar un análisis por separado para estos casos&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Los pasos que debemos de seguir para poder implementar este tipo de análisis son los siguientes:&lt;/p&gt;
 &lt;ul&gt;
@@ -119,7 +120,8 @@
 &lt;/table&gt;
 &lt;p&gt;Una vez cargado el análisis, corremos la lógica del ABC y XYZ y creamos las clasificaciones correspondientes. Esto nos permitirá elaborar la siguiente gráfica:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/post/clasificacion-abc-xyz/index_files/figure-html/imagen-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Para cada uno de los cuadrantes que estamos observanco en la gráfica, recomendamos distintos niveles de servicio. Si análizamos el resultado, podemos observar…&lt;/p&gt;
+&lt;p&gt;(Explicación de la gráfica)
+Para cada uno de los cuadrantes que estamos observanco en la gráfica, recomendamos distintos niveles de servicio. Si análizamos el resultado, podemos observar…&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
