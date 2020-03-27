@@ -140,7 +140,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Una vez cargado el análisis, corremos la lógica del ABC y XYZ y creamos las clasificaciones correspondientes. Esto nos permitirá elaborar la siguiente gráfica:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-03-13-clasificación-abc-xyz_files/figure-html/imagen-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/clasificacion-abc-xyz/index_files/figure-html/imagen-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Para cada uno de los cuadrantes que estamos observanco en la gráfica, recomendamos distintos niveles de servicio. Si análizamos el resultado, podemos observar…&lt;/p&gt;
 &lt;/div&gt;
 </description>

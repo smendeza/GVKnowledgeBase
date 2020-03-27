@@ -1,0 +1,128 @@
+---
+title: Clasificación ABC - XYZ
+author: Saúl Méndez
+date: '2020-03-13'
+slug: clasificacion-abc-xyz
+categories:
+  - Análisis descriptivo
+tags:
+  - ABC
+  - Administración de inventarios
+  - Inventarios
+  - Pareto
+  - Coeficiente de Variación
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-03-13T14:58:33-06:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+
+<p>Es una herramienta utilizada usualmente para el establecimiento de políticas de administración de inventario a través del establecimiento de niveles de servicio basados en la volatilidad de la venta y la contribución al total de ventas de cada sku.</p>
+<p>En la clasificacion XYZ se establece un estándar de nivel de servicio, <a href="https://saulm.netlify.com/post/coeficiente-de-variacion/">en la entrada</a> en donde explicamos en que consiste este análisis, no nos aventuramos a verificar cual sería el efecto de tener un nivel de servicio del 100% en todos los skus. Hagamos el siguiente ejercicio mental: Supongamos que un cliente nos pregunta porque no tomar este enfoque y tu siendo un consultor que entiende el efecto le responde:</p>
+<blockquote>
+<p>Si realizamos este tipo de estrategia para todo el inventario, estariamos elevando las cobertutras de inventario de productos que su contribución al volumen de venta no justifique el costo de oportunidad de mantener una unidad extra en inventario, implicando un costo de inversión mucho más grande de lo necesario.</p>
+</blockquote>
+<p>Luego de un momento de silencio vienes y le propones lo siguiente:</p>
+<blockquote>
+<p>Podemos afinar la estrategia de niveles de servicio incluyendo una clasificación adicional que nos ayude a identificar los skus por nivel de contribución a la venta total y generar estrategías personalizadas para cada uno de los distintos casos que nos podemos encontrar.</p>
+</blockquote>
+<p>Para poder cumplir con la promesa anterior, vienes y le muestras la siguiente tabla, que resumen el nivel de servicio que estariamos recomendando mantener para cada producto</p>
+<p><strong>INSERTAR TABLA RESUMEN ABC-XYZ</strong></p>
+<div id="implementación" class="section level1">
+<h1>Implementación</h1>
+<p>Para poder implementar este análisis necesitamos</p>
+<ul>
+<li>Ventas de los U12M</li>
+<li>Valor de las existencias actuales</li>
+<li>Identificar a los productos de nuevo ingreso, para excluirlos del análisis.</li>
+</ul>
+<p>Los pasos que debemos de seguir para poder implementar este tipo de análisis son los siguientes:</p>
+<ul>
+<li>Calcular el ABC de la venta U12M</li>
+<li>Calcular la clasificación XYZ</li>
+<li>Concatenar la clasificación ABC con la XYZ</li>
+<li>Determinar el nivel de servicio y número de desviaciones estándar</li>
+<li>Determinar niveles de inventario ideales</li>
+</ul>
+</div>
+<div id="presentando-el-resultado" class="section level1">
+<h1>Presentando el resultado</h1>
+<p>En este ejemplo, estamos analizando bajo el enfoque ABC-XYZ una base de datos que contiene la venta y el inventario de distintos skus de ron vendidos en algún lugar del mundo.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Codigo</th>
+<th align="left">Familia</th>
+<th align="right">Existencia</th>
+<th align="right">Venta12m</th>
+<th align="right">Promedio</th>
+<th align="right">Stdev</th>
+<th align="right">CoV</th>
+<th align="right">Cobertura</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">133</td>
+<td align="left">RON</td>
+<td align="right">10</td>
+<td align="right">85</td>
+<td align="right">7.083333</td>
+<td align="right">8.918401</td>
+<td align="right">1.2590684</td>
+<td align="right">1.411765</td>
+</tr>
+<tr class="even">
+<td align="right">134</td>
+<td align="left">RON</td>
+<td align="right">647</td>
+<td align="right">3154</td>
+<td align="right">262.833333</td>
+<td align="right">282.104698</td>
+<td align="right">1.0733216</td>
+<td align="right">2.461636</td>
+</tr>
+<tr class="odd">
+<td align="right">135</td>
+<td align="left">RON</td>
+<td align="right">514</td>
+<td align="right">2630</td>
+<td align="right">219.166667</td>
+<td align="right">145.998651</td>
+<td align="right">0.6661535</td>
+<td align="right">2.345247</td>
+</tr>
+<tr class="even">
+<td align="right">136</td>
+<td align="left">RON</td>
+<td align="right">397</td>
+<td align="right">3847</td>
+<td align="right">320.583333</td>
+<td align="right">160.976824</td>
+<td align="right">0.5021372</td>
+<td align="right">1.238368</td>
+</tr>
+<tr class="odd">
+<td align="right">137</td>
+<td align="left">RON</td>
+<td align="right">167</td>
+<td align="right">346</td>
+<td align="right">28.833333</td>
+<td align="right">33.943357</td>
+<td align="right">1.1772263</td>
+<td align="right">5.791907</td>
+</tr>
+</tbody>
+</table>
+<p>Una vez cargado el análisis, corremos la lógica del ABC y XYZ y creamos las clasificaciones correspondientes. Esto nos permitirá elaborar la siguiente gráfica:</p>
+<p><img src="/post/clasificacion-abc-xyz/index_files/figure-html/imagen-1.png" width="672" /></p>
+<p>Para cada uno de los cuadrantes que estamos observanco en la gráfica, recomendamos distintos niveles de servicio. Si análizamos el resultado, podemos observar…</p>
+</div>
