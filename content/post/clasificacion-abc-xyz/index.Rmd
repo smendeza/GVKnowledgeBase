@@ -22,26 +22,26 @@ image:
   preview_only: no
 projects: []
 ---
-Es una herramienta utilizada usualmente para el establecimiento de políticas de administración de inventario a través del establecimiento de niveles de servicio basados en la volatilidad de la venta y la contribución al total de ventas de cada sku.
+Es una herramienta utilizada usualmente para el establecimiento de políticas de administración de inventario a través de niveles de servicio basados en la volatilidad de la venta y la contribución al total de ventas de cada sku.
 
-En la clasificacion XYZ se establece un estándar de nivel de servicio, [en la entrada](https://saulm.netlify.com/post/coeficiente-de-variacion/) en donde explicamos en que consiste este análisis, no nos aventuramos a verificar cual sería el efecto de tener un nivel de servicio del 100% en todos los skus. Hagamos el siguiente ejercicio mental: Supongamos que un cliente nos pregunta porque no tomar este enfoque y tu siendo un consultor que entiende el efecto le responde:
+En la clasificacion XYZ se establece un estándar de nivel de servicio, [en la entrada](https://saulm.netlify.com/post/coeficiente-de-variacion/) en donde explicamos en qué consiste este análisis, no nos aventuramos a verificar cuál sería el efecto de tener un nivel de servicio del 100% en todos los skus. Hagamos el siguiente ejercicio mental: Supongamos que un cliente nos pregunta porqué no tomar este enfoque y tú siendo un consultor que entiende el efecto le respondes:
 
-  >  Si realizamos este tipo de estrategia para todo el inventario, estariamos elevando las cobertutras de inventario de productos que su contribución al volumen de venta no justifique el costo de oportunidad de mantener una unidad extra en inventario, implicando un costo de inversión mucho más grande de lo necesario. 
+  >  Si realizamos este tipo de estrategia para todo el inventario, encontraríamos los productos de poca rotación, los cuales podríamos intercambiarlos por productos con más demanda del mercado, mejorando nuestro costo de oportunidad y generar un ahorro en el proceso de compras.  
 
-Luego de un momento de silencio vienes y le propones lo siguiente:
+Para añadir más información, puedes agregar lo siguiente:
 
   > Podemos afinar la estrategia de niveles de servicio incluyendo una clasificación adicional que nos ayude a identificar los skus por nivel de contribución a la venta total y generar estrategías personalizadas para cada uno de los distintos casos que nos podemos encontrar.
   
-Para poder cumplir con la promesa anterior, vienes y le muestras la siguiente tabla, que resumen el nivel  de servicio que estariamos recomendando mantener para cada producto
+Y para poder cumplir con la promesa anterior, presentas la siguiente tabla, que resume el nivel  de servicio que estaríamos recomendando mantener para cada producto
 
 **INSERTAR TABLA RESUMEN ABC-XYZ**
 
 # Implementación
 Para poder implementar este análisis necesitamos
   
-  * Ventas de los U12M
+  * Ventas de los últimos 12 meses (U12M)
   * Valor de las existencias actuales
-  * Identificar a los productos de nuevo ingreso, para excluirlos del análisis.
+  * Identificar a los productos de nuevo ingreso, para excluirlos del análisis. ¿Por qué se excluyen) 
 
 Los pasos que debemos de seguir para poder implementar este tipo de análisis son los siguientes:
 
@@ -107,4 +107,5 @@ analisis %>%
   ggtitle("Clasificación ABC-XYZ")
 ```
 
+(Explicación de la gráfica)
 Para cada uno de los cuadrantes que estamos observanco en la gráfica, recomendamos distintos niveles de servicio. Si análizamos el resultado, podemos observar...
