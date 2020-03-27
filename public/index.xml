@@ -154,26 +154,27 @@ Para cada uno de los cuadrantes que estamos observanco en la gráfica, recomenda
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
       <guid>/post/coeficiente-de-variacion/</guid>
       <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;div id=&#34;porqué-utilizar-el-coeficiente-de-variación&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;¿Porqué utilizar el coeficiente de variación?&lt;/h1&gt;
+&lt;div id=&#34;por-qué-utilizar-el-coeficiente-de-variación&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;¿Por qué utilizar el coeficiente de variación?&lt;/h1&gt;
 &lt;p&gt;Es una forma de medir de forma estandarizada la volatilidad de distintas distribuciones. Nos permite hacer comparaciones de distintas variables haciendo uso de su valor medio y la desviación estándar.&lt;/p&gt;
 &lt;div id=&#34;para-qué-nos-puede-servir&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;¿Para qué nos puede servir?&lt;/h2&gt;
 &lt;p&gt;Digamos que nuestra misión es determinar los niveles más adecuados de inventario y actualmente manejamos dos productos, el primer producto(p1) se registra en cajas y el segundo producto(p2) se maneja en sobres.&lt;/p&gt;
-&lt;p&gt;La forma más sencilla de atacar este problema es comprando el valor promedio. Esta estrategia funciona si tengo una demanda estable y poco variable. Este tipo de comportamiento, visto en un histograma se ve de la siguiente forma:
+&lt;p&gt;La forma más sencilla de atacar este problema es comparando el valor promedio. Esta estrategia funciona si tengo una demanda estable y poco variable. Este tipo de comportamiento, visto en un histograma se ve de la siguiente forma:
 &lt;strong&gt;INSERTAR GRÁFICO&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Recordemos que el valor al centro de la distribución es el promedio y que la mayoría de los valores observados se encuentran centrados muy cerca de este. El caso se complica cuando la distribución se comporta de forma más volátil, por lo que comprar el promedio puede significar un costo de oportunidad muy grande para nuestro ciente. Este tipo de situaciones se vería de la siguiente forma.&lt;/p&gt;
+&lt;p&gt;Recordemos que el valor al centro de la distribución es el promedio y que la mayoría de los valores observados se encuentran centrados muy cerca de este. El caso se complica cuando la distribución se comporta de forma más volátil, por lo que comparar el promedio puede significar un costo de oportunidad muy grande para nuestro ciente. Este tipo de situaciones se vería de la siguiente forma.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;INSERTAR GRÁFICO&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Para lograr una mejor del grado de volatilidad que se observa en la gráfica, utilizamos la desviación estándar. Esto con el objetivo de conocer cuantas unidades de separación al promedio puedo esperar. Con esto ya tenemos dos variables para describir el producto.&lt;/p&gt;
+&lt;p&gt;Para lograr una mejora del grado de volatilidad que se observa en la gráfica, utilizamos la desviación estándar. Esto con el objetivo de conocer cuántas unidades de separación al promedio puedo esperar. Con esto ya tenemos dos variables para describir el producto.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;INSERTAR TABLA&lt;/strong&gt;
-¿Cual es más volatil?: intuitivamente podriamos haber pensado que la opción 2 es la más volatil(correcto)&lt;/p&gt;
-&lt;p&gt;En este caso, es muy facil identificar a ojo cual es la variable más volatil. ¿Qué harian en el caso de manejar 10,000 skus? Si seguimos usando el metodo del ojimetro, debemos prepararnos a una intensidad titánica de trabajo para identificar cuales son los más volatiles. Digamos que lo logramos y ahora queremos ordenarlos por nivel de volatilidad…en este caso ya no podemos hacer uso del trabajo manual y hasta aca llegariamos con nuestros esfuerzos.&lt;/p&gt;
+¿Cual es más volatil?: intuitivamente podríamos haber pensado que la opción 2 es la más volatil(correcto)&lt;/p&gt;
+&lt;p&gt;En este caso, es muy fácil identificar al ojo cuál es la variable más volatil. ¿Qué harían en el caso de manejar 10,000 skus? Si seguimos usando el metodo del ojímetro, debemos prepararnos a una intensidad titánica de trabajo para identificar cuáles son los más volátiles. Digamos que lo logramos y ahora queremos ordenarlos por nivel de volatilidad…en este caso ya no podemos hacer uso del trabajo manual y hasta aca llegaríamos con nuestros esfuerzos.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;introduciendo-al-coeficiente-de-variabilidad&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Introduciendo al Coeficiente de Variabilidad&lt;/h2&gt;
-&lt;p&gt;La opción más sencilla y super facil de implementar es el calcular el Coeficiente de Variabilidad.
+&lt;p&gt;La opción más sencilla y fácil de implementar es calcular el Coeficiente de Variabilidad.
 Su definición es:&lt;code&gt;Desviación Estandar / Promedio&lt;/code&gt;.
 El realizar esto nos permite quitarle las dimensiones a las medidas descriptivas (promedio, desviación estándar)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;INSERTAR ESCALA COMPARATIVA DEL VALOR DE COEFICIENTE PARA P1 Y P2&lt;/strong&gt;&lt;/p&gt;
@@ -187,15 +188,15 @@ El realizar esto nos permite quitarle las dimensiones a las medidas descriptivas
 &lt;li&gt;y -&amp;gt; 0.3&amp;lt;CoV&amp;lt;=0.6&lt;/li&gt;
 &lt;li&gt;z -&amp;gt; CoV&amp;gt;0.6&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Luego, para cada una de estas clasificaciones definimos un nivel de servicio, el cual nos debe de ayudar a generar cual es el monto de inventario ideal.&lt;/p&gt;
+&lt;p&gt;Luego, para cada una de estas clasificaciones definimos un nivel de servicio, el cual nos indica cuál es el monto de inventario ideal.&lt;/p&gt;
 &lt;div id=&#34;nivel-de-servicio&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Nivel de servicio&lt;/h2&gt;
-&lt;p&gt;Es la probabilidad con la que quiero asegurarme de cubrir la demanda durante un periodo de tiempo.
-En estadística existe un concepto de la curva normal estándar, en donde el valor medio se encuentra centrado en 0 con una desviación estándar de +-1. Tambien tiene la caracteriztica que si sumamos el área de izquierda a derecha de la curva, esta suma exactamente 50% del área.&lt;/p&gt;
+&lt;p&gt;Es la probabilidad con la que se pretende cubrir la demanda durante un periodo de tiempo.
+En estadística existe un concepto de la curva normal estándar, en donde el valor medio se encuentra centrado en 0 con una desviación estándar de +-1. También tiene la característica que si sumamos el área de izquierda a derecha de la curva, esta suma exactamente 50% del área.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;COLOCAR IMAGEN DE CURVA DE PROBABILIDAD AL 50%&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Si a la media le sumamos una desviación estándar, el valor del área es del 84% aproximadamente. A este porcentaje del área es lo que conocemos como nivel de servicio.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;COLOCAR IMAGEN DE CURVA DE PROBABILIDAD AL 84%&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Bajo el enfoque que nos interesa, nosotros decidimos el nivel de servicio que queremos obtener, es decir con que nivel de confianza adicional le voy a agregar al promedio. Recordemos al determinar el nivel de servicio, estamos definiendo la cantidad de desviaciones estándar que le agregaremos al promedio.&lt;/p&gt;
+&lt;p&gt;Bajo el enfoque que nos interesa, nosotros decidimos el nivel de servicio que queremos obtener, es decir con qué nivel de confianza adicional le voy a agregar al promedio. Recordemos al determinar el nivel de servicio, estamos definiendo la cantidad de desviaciones estándar que le agregaremos al promedio.&lt;/p&gt;
 &lt;p&gt;Para el caso que estamos tratando, lo usual es usar los siguientes niveles de servicio.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;x -&amp;gt; 98%(2.05)&lt;/li&gt;
